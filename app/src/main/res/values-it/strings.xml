@@ -1,0 +1,420 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">i-Log</string>
+
+    <!--section/tabs names-->
+    <string name="settings">Impostazioni</string>
+    <string name="sensing">Sensori</string>
+
+    <!--authentication texts-->
+    <string name="username">Username</string>
+    <string name="password">Password</string>
+    <string name="login">Login</string>
+    <string name="logout">Logout</string>
+
+    <string name="notification_sleep_settings">Notifiche</string>
+    <string name="notification_settings_title">Dormire</string>
+    <string name="notification_settings_subtitle">Interrompi le notifiche</string>
+    <string name="notification_settings_subtitle_for" formatted="false">Interrompi le notifiche per %d ore fino alle %s</string>
+    <string name="notification_settings_toast" formatted="false">Le notifiche saranno interrotte fino alle %s</string>
+    <string name="notification_settings_toast_reset" formatted="false">Le notifiche non sono piú interrotte</string>
+    <string name="notification_settings_dialog">Per quanto dormirai?</string>
+
+    <!--Settings menu-->
+    <string name="taskNotificationTitle">Tasks</string>
+    <string name="taskNotificationSubtitle" formatted="false">Hai %d task da risolvere</string>
+    <string name="messageNotificationSubtitle" formatted="false">Hai %d messaggi da leggere</string>
+
+    <string name="user_settings">Utente</string>
+    <string name="application_settings">Applicazione</string>
+    <string name="data_settings">Dati</string>
+    <string name="sensors_settings">Sensori</string>
+    <string name="positioning_settings">Posizione</string>
+    <string name="ambience_settings">Ambiente</string>
+    <string name="social_settings">Sociale</string>
+    <string name="social_bluetooth_settings">Bluetooth</string>
+    <string name="social_bluetooth_le_settings">Bluetooth LE</string>
+    <string name="logs_value_settings">Gestisci Log</string>
+    <string name="logs_settings">Log</string>
+    <string name="sync_logs">Sincronizza Log</string>
+    <string name="delete_archive_files">Cancella log</string>
+    <string name="sync_logs_summary">Sincronizza i file con il server</string>
+    <string name="delete_archive_files_summary"></string>
+
+    <string name="tasks_settings_summary">Gestisci rilevazioni</string>
+    <string name="tasks_settings_title">Rilevazioni/Domande</string>
+    <string name="tasks_settings_solved_summary">Gestisci rilevazioni risolte</string>
+    <string name="tasks_settings_solved_title">Rilevazioni/Domande risolte</string>
+    <string name="tasks_settings_unsolved_summary">Gestisci rilevazioni non risolte</string>
+    <string name="tasks_settings_unsolved_title">Rilevazioni/Domande non risolte</string>
+    <string name="news_settings_summary">Controlla le news</string>
+    <string name="news_settings_title">News</string>
+    <string name="message_settings_summary">Controlla i messaggi</string>
+    <string name="message_settings_title">Messaggi</string>
+
+    <string name="challenges_settings_summary">Manage Challenges</string>
+    <string name="challenges_settings_title">Challenges</string>
+    <string name="time_diaries_summary">Manage Time Diaries</string>
+    <string name="time_diaries_settings_title">Time Diaries</string>
+    <string name="messages_settings_summary">Check messages</string>
+    <string name="messages_settings_title">Messages</string>
+
+    <string name="pref_sensors_sensors_settings">pref_sensors_sensors_settings</string>
+    <string name="pref_sensors_positioning_settings">pref_sensors_positioning_settings</string>
+    <string name="pref_sensors_ambience_settings">pref_sensors_ambience_settings</string>
+    
+    <string name="positioning_gps_settings">GPS</string>
+    <string name="positioning_gps_summary_settings">Raccolta dati non in corso</string>
+    <string name="positioning_network_settings">Reti</string>
+    <string name="positioning_network_summary_settings">Raccolta dati non in corso</string>
+    <string name="ambience_wifi_settings">WI-FI</string>
+    <string name="networks_wifi_settings">Reti WI-FI</string>
+    <string name="ambience_wifi_summary_settings">Raccolta dati non in corso</string>
+    <string name="networks_wifi_summary_settings">Raccolta dati non in corso</string>
+    <string name="sensors_accelerometer_settings">Accelerometro</string>
+    <string name="sensors_accelerometer_summary_settings">Raccolta dati non in corso</string>
+    <string name="sensors_step_counter_settings">Contapassi</string>
+    <string name="sensors_step_counter_summary_settings">Raccolta dati non in corso</string>
+    <string name="sensors_step_detector_settings">Sensor di Passi</string>
+    <string name="sensors_step_detector_summary_settings">Raccolta dati non in corso</string>
+    <string name="sensors_gravity_settings">Gravita\'</string>
+    <string name="sensors_gravity_summary_settings">Raccolta dati non in corso</string>
+    <string name="sensors_gyroscope_settings">Giroscopio</string>
+    <string name="sensors_gyroscope_summary_settings">Raccolta dati non in corso</string>
+    <string name="sensors_linearacceleration_settings">Accelerazione Lineare</string>
+    <string name="sensors_linearacceleration_summary_settings">Raccolta dati non in corso</string>
+    <string name="sensors_rotationvector_settings">Vettore Rotazione</string>
+    <string name="sensors_rotationvector_summary_settings">Raccolta dati non in corso</string>
+    <string name="sensors_magneticfield_settings">Campo Magnetico</string>
+    <string name="sensors_magneticfield_summary_settings">Raccolta dati non in corso</string>
+    <string name="sensors_orientation_settings">Orientamento</string>
+    <string name="sensors_orientation_summary_settings">Raccolta dati non in corso</string>
+    <string name="sensors_proximity_settings">Prossimita\'</string>
+    <string name="sensors_proximity_summary_settings">Raccolta dati non in corso</string>
+    <string name="sensors_temperature_settings">Temperatura</string>
+    <string name="sensors_temperature_summary_settings">Raccolta dati non in corso</string>
+    <string name="sensors_light_settings">Luce</string>
+    <string name="sensors_light_summary_settings">Raccolta dati non in corso</string>
+    <string name="sensors_pressure_settings">Pressione</string>
+    <string name="sensors_pressure_summary_settings">Raccolta dati non in corso</string>
+    <string name="sensors_humidity_settings">Umidita\'</string>
+    <string name="sensors_humidity_summary_settings">Raccolta dati non in corso</string>
+    <string name="audio_settings">Audio</string>
+    <string name="audio_summary_settings">Raccolta dati non in corso</string>
+    <string name="audio_gear_settings">Audio (Gear)</string>
+    <string name="sensors_accelerometer_gear_settings">Accelerometro (Gear)</string>
+    <string name="sensors_gyroscope_gear_settings">Giroscopio (Gear)</string>
+    <string name="calendar_settings">Calendario</string>
+    <string name="calls_settings">Chiamate</string>
+    <string name="calls_in_settings">Chiamate in entrata</string>
+    <string name="calls_out_settings">Chiamate in uscita</string>
+    <string name="sms_settings">Sms</string>
+    <string name="sms_in_settings">Sms in entrata</string>
+    <string name="sms_out_settings">Sms in uscita</string>
+    <string name="smartphone_usage_settings">Utilizzo dello smartphone</string>
+    <string name="app_running_settings">Applicazione in esecuzione</string>
+    <string name="screen_running_settings">Stato dello schermo</string>
+    <string name="calendar_summary_settings">Raccolta dati non in corso</string>
+    <string name="calls_in_summary_settings">Raccolta dati non in corso</string>
+    <string name="calls_out_summary_settings">Raccolta dati non in corso</string>
+    <string name="sms_in_summary_settings">Raccolta dati non in corso</string>
+    <string name="sms_out_summary_settings">Raccolta dati non in corso</string>
+    <string name="app_usage_summary_settings">Raccolta dati non in corso</string>
+    <string name="screen_usage_summary_settings">Raccolta dati non in corso</string>
+    <string name="social_bluetooth_summary_settings">Raccolta dati non in corso</string>
+    <string name="social_bluetooth_le_summary_settings">Raccolta dati non in corso</string>
+    <string name="notification_settings">IMPOSTAZIONI</string>
+    <string name="notification_stop">STOP</string>
+    <string name="notification_home">CONTRIBUTI</string>
+    <string name="channel_name">NotificationChannel di i-Log</string>
+    <string name="channel_description">And this is the channel description</string>
+
+    <string-array name="logging_modality_settings">
+        <item>Log Nothing</item>
+        <item>Normal</item>
+        <item>Normal + GPS Optimized</item>
+        <item>Fastest</item>
+    </string-array>
+     <string-array name="logging_modality_values_settings">
+        <item>Log Nothing</item>
+        <item>Normal</item>
+        <item>Normal + GPS Optimized</item>
+        <item>Fastest</item>
+    </string-array>
+    
+    <!--Preference Menu Keys-->
+    <string name="pref_login_button">pref_login_button</string>
+    <string name="pref_logging_list">pref_logging_list</string>
+    <string name="pref_update_status">pref_update_status</string>
+    <string name="pref_update_current">pref_update_current</string>
+    <string name="pref_update_latest">pref_update_latest</string>
+    <string name="pref_update_button">pref_update_button</string>
+    <string name="pref_log_sync">pref_log_sync</string>
+    <string name="pref_main_preferencescreen">pref_main_preferencescreen</string>
+    <string name="pref_sensors_accelerometer">pref_sensors_accelerometer</string>
+    <string name="pref_sensors_termometer">pref_sensors_termometer</string>
+    <string name="pref_sensors_gravity">pref_sensors_gravity</string>
+    <string name="pref_sensors_gyroscope">pref_sensors_gyroscope</string>
+    <string name="pref_sensors_linearacceleration">pref_sensors_linearacceleration</string>
+    <string name="pref_sensors_rotationvector">pref_sensors_rotationvector</string>
+    <string name="pref_sensors_magneticfield">pref_sensors_magneticfield</string>
+    <string name="pref_sensors_orientation">pref_sensors_orientation</string>
+    <string name="pref_sensors_proximity">pref_sensors_proximity</string>
+    <string name="pref_sensors_light">pref_sensors_light</string>
+    <string name="pref_sensors_pressure">pref_sensors_pressure</string>
+    <string name="pref_sensors_humidity">pref_sensors_humidity</string>
+    <string name="pref_sensors_gps">pref_sensors_gps</string>
+    <string name="pref_sensors_network">pref_sensors_network</string>
+    <string name="pref_sensors_networks">pref_sensors_networks</string>
+    <string name="pref_sensors_ambience">pref_sensors_ambience</string>
+    <string name="pref_sensors_audio">pref_sensors_audio</string>
+    <string name="pref_sensors_audio_gear">pref_sensors_audio_gear</string>
+    <string name="pref_sensors_calendar">pref_sensors_calendar</string>
+    <string name="pref_sensors_step_counter">pref_sensors_step_counter</string>
+    <string name="pref_sensors_step_detector">pref_sensors_step_detector</string>
+    <string name="pref_sensors_calls_in">pref_sensors_calls_in</string>
+    <string name="pref_sensors_calls_out">pref_sensors_calls_out</string>
+    <string name="pref_sensors_sms_in">pref_sensors_sms_in</string>
+    <string name="pref_sensors_sms_out">pref_sensors_sms_out</string>
+    <string name="pref_sensors_app_usage">pref_sensors_app_usage</string>
+    <string name="pref_sensors_screen_usage">pref_sensors_screen_usage</string>
+    <string name="pref_sensors_accelerometer_gear">pref_sensors_accelerometer_gear</string>
+    <string name="pref_sensors_gyroscope_gear">pref_sensors_gyroscope_gear</string>
+    <string name="pref_sensors_bluetooth">pref_sensors_bluetooth</string>
+    <string name="pref_sensors_bluetooth_le">pref_sensors_bluetooth_le</string>
+    <string name="pref_livemodality_sensor">pref_livemodality_sensor</string>
+    <string name="pref_demomodality_sensor">pref_demomodality_sensor</string>
+    <string name="pref_log_delete_archive">pref_log_delete_archive</string>
+    <string name="pref_log_app_version">pref_log_app_version</string>
+    
+    
+    <!--Bluetooth-->
+    <string name="bluetooth_pair_summary">Selezione il nome del dispositivo</string>
+    <string name="bluetooth_pair_title">Seleziona il dispositivo</string>
+    <string name="bluetooth_connect_title">Connessione al dispositivo</string>
+    <string name="bluetooth_disconnect_title">Disconenssione dal dispositivo</string>
+    <string name="bluetooth_value_settings">Disconnesso</string>
+    <string name="bluetooth_settings">Dispositivi Bluetooth</string>
+    	            
+    <string name="json">json</string>
+    
+    <string name="selectedDate">selectedDate</string>
+
+    <string name="google_maps_key">AIzaSyCBQwpjJIgCrANb-SoFFzQnwA5ciHNCx2A</string>
+
+    <string name="questionnaireNotificationTitle">Diario del tempo</string>
+    <string name="messageNotificationTitle">Messaggio</string>
+    <string name="questionnaireNotificationSubtitle" formatted="false">Hai %d domande a cui rispondere</string>
+    <string name="mainNotificationTitle">iLog</string>
+    <string name="mainNotificationSubTitle" formatted="false">Oggi hai usato l\'app per %d h e %d m</string>
+    <string name="loggingProgress">Raccolta dati in corso</string>
+    <string name="loggingNotProgress">Raccolta dati non in corso</string>
+    <string name="deleteArchive">Rimuovere i file generati?</string>
+    <string name="affirmativeAnswer">Si</string>
+    <string name="negativeAnswer">No</string>
+    <string name="cancelAnswer">Cancella</string>
+    <string name="archiveDeleteSuccess">File cancellati con successo</string>
+    <string name="archiveDeleteError">Alcuni file non sono stati cancellati</string>
+    <string name="loginAs">Loggato come </string>
+    <string name="loginAsk">Effettuare il login per utilizzare l\'applicazione</string>
+    <string name="loginSuccess">Login effettuato</string>
+    <string name="loginError">Errore login</string>
+    <string name="syncNoFiles">Non ci sono file da sincronizzare</string>
+    <string name="syncFiles">file da sincronizzare</string>
+    <string name="userInformation">Informazioni utente</string>
+
+    <string name="question">Domanda</string>
+    <string name="question1">Cosa hai fatto alle</string>
+    <string name="question2">Come ti sei spostato alle</string>
+    <string name="question3">Con chi eri alle</string>
+    <string name="question4">Dove eri alle</string>
+
+    <string name="server_client_id">132157554409-rn2bf9mjqi3c2uvlvaa8sgtm9hren23n.apps.googleusercontent.com</string>
+
+    <string name="appversion">Versione Applicazione</string>
+    <string name="updateNotificationTitle">i-Log in aggiornamento</string>
+
+    <string name="startLogging">Avvia raccolta</string>
+    <string name="stopLogging">Sospendi raccolta</string>
+
+    <string name="userLoggedIn">Utente loggato</string>
+    <string name="userNotLoggedIn">Utente non loggato</string>
+
+    <string name="previous">Precedente</string>
+    <string name="next">Successivo</string>
+    <string name="finish">Completa</string>
+    <string name="close">Chiudi</string>
+
+
+    <string name="shortcut_settings_short">Impostazioni</string>
+    <string name="shortcut_settings_long">Impostazioni</string>
+    <string name="shortcut_settings_disabled">Impostazioni</string>
+    <string name="shortcut_questions_short">Diario del tempo</string>
+    <string name="shortcut_questions_long">Diario del tempo</string>
+    <string name="shortcut_questions_disabled">Diario del tempo</string>
+
+    <string name="sensors_livemodality_summary_settings">Send data in real-time</string>
+    <string name="sensors_demomodality_summary_settings">Activate Demo ISWC</string>
+
+    <string name="permissions_summary_title">Gestisci Permessi</string>
+    <string name="permissions_settings_title">Permessi</string>
+
+    <string name="battery_permission_title">Ottimizzazione Batteria</string>
+    <string name="location_permission_title">Accedere alla Posizione</string>
+    <string name="audio_permission_title">Accedere all\'Audio</string>
+    <string name="contacts_permission_title">Accedere ai Contatti</string>
+    <string name="sms_permission_title">Rilevare gli Sms</string>
+    <string name="phone_permission_title">Rilevare le Chiamate</string>
+    <string name="notifications_permission_title">Rilevare le Notifiche</string>
+    <string name="applications_permission_title">Rilevare l\'Applicazione in Esecuzione</string>
+    <string name="touch_permission_title">Rilevare Tocchi Sullo Schermo</string>
+    <string name="camera_permission_title">Scattare Foto</string>
+    <string name="wifi_permission_title">Sincronizzazione automatica su Wi-Fi</string>
+    <string name="disable_permission_message">Per disattivare questo permesso è necessario andare nelle Impostazioni di Sistema</string>
+
+    <string name="welcome_message">Benvenuto in i-Log</string>
+    <string name="description_message">i-Log e\' un\'applicazione sviluppata dall\'Universita\' degli Studi di Trento al fine di raccogliere big data personali per scopi di ricerca. \n\n Nel box sottostante inserisci il codice che ti e\' stato fornito per accedere all\'esperimento.</string>
+    <string name="configuration_message">Per cominciare, configura i-Log</string>
+    <string name="start_configuration_message">INIZIA</string>
+    <string name="resume_configuration_message">CONTINUA</string>
+    <string name="battery_message"> Per permettere l\'esecuzione di i-Log nel background, si chiede agli utenti di ignorare l\'opzione di ottimizzazione della batteria. Questo però non influisce sulla durata della batteria.\nSenza questo permesso, i-Log non può funzionare :-(</string>
+    <string name="battery_confirmation">CONTINUA</string>
+    <string name="location_message">Permette di rilevare la poizione del telefono. Quest\'informazione aiuta a capire le abitudini di spostamento delle persone.\nNon ci interessa dove vive la gente.</string>
+    <string name="location_confirmation">CONTINUA</string>
+    <string name="notifications_message">Permette di rilevare l\'arrivo di notifiche. Non ne viene letto il contenuto, ma solo che l\'utente ne ha ricevuto una. Quest\'informazione aiuta a capire come le persone interagiscono con la tecnologia.</string>
+    <string name="notifications_confirmation">CONTINUA</string>
+    <string name="audio_message">Permette di raccogliere piccole sequenze di suoni ambientali. Quest\'informazione aiuta a capire dove si sposta la gente.\nNon siamo Google e non siamo così bravi a capire cosa dice la gente, quindi non c\'è da preoccuparsi.</string>
+    <string name="audio_confirmation">CONTINUA</string>
+    <string name="applications_message">Permette di raccogliere il nome dell\'applicazione in uso sul telefono. Quest\'informazione aiuta a capire come gli utenti interagiscono con il loro telefono.</string>
+    <string name="applications_confirmation">CONTINUA</string>
+    <string name="touch_message">Permette di rilevare quando l\'utente tocca lo schermo, ma non si può sapere dove avvenga il tocco. Quest\'informazione aiuta a capire come gli utenti interagiscono con il loro telefono.</string>
+    <string name="touch_confirmation">CONTINUA</string>
+    <string name="phone_message">Permette di rilevare quando viene fatta o ricevuta una chiamata. Il contenuto della chiamata non è accessibile. Quest\'informazione aiuta a capire le interazioni fra gli utenti.</string>
+    <string name="phone_confirmation">CONTINUA</string>
+    <string name="sms_message">Permette di rilevare quando viene mandato o ricevuto un SMS. Il contenuto dello SMS non è accessibile. Quest\'informazione aiuta a capire le interazioni fra gli utenti.</string>
+    <string name="sms_confirmation">CONTINUA</string>
+    <string name="contacts_message">Anche se i dati sono anonimizzati e non possiamo capire di chi siano, c\'e\' bisogno del tuo ID per far si che i dati vengano scaricati dal tuo telefono verso i nostri server. \nSenza questo permesso, i-Log non può funzionare :-(</string>
+    <string name="contacts_confirmation">CONTINUA</string>
+    <string name="summary_message_low" formatted="false">La configurazione è terminata!\nAdesso basta che fai andare i-Log e rispondi alle domande quando possibile.\nHai dato %d permessi su %d; ricorda che se ne volessi dare di più, puoi farlo nelle impostazioni di i-Log.\nGrazie mille!</string>
+    <string name="summary_message_high">La configurazione è terminata!\nAdesso basta che fai andare i-Log e rispondi alle domande quando possibile.\nGrazie mille!</string>
+    <string name="summary_confirmation">FINITO</string>
+    <string name="summary_gotosettings">VAI ALLE IMPOSTAZIONI</string>
+    <string name="skip">SALTA</string>
+    <string name="login_message">Please select your main Google account, the one you use on the Google Play Store :-(</string>
+    <string name="login_confirmation">CONTINUE</string>
+
+    <string name="project_retrieval_not_found">Progetto non trovato</string>
+    <string name="project_retrieval_error">Errore nello scaricamenteo delle informazioni del progetto, riprovare</string>
+    <string name="project_retrieval_done">Progetto trovato</string>
+
+    <string name="consent_message">Consenso informato</string>
+    <string name="profile_message">Profilo</string>
+    <string name="permissions_message">Permessi</string>
+    <string name="login_title">Login</string>
+
+    <string name="scroll_down_consent">Scorri il testo sopra</string>
+
+    <string name="dump_archive_files_summary">Clicca qui per scaricare i logs sulla sd card, fallo solo se ti e\' stato chiesto!!</string>
+    <string name="dump_archive_files">Passa File</string>
+    <string name="confirm_message">Conferma</string>
+    <string name="give_consent">Autorizza prima di procedere</string>
+
+    <string name="authorize">Autorizzo</string>
+    <string name="resetapp">Resetta l\'applicazione</string>
+    <string name="resetappsummary">Resetta tutte le impostazioni e gli esperimenti</string>
+    <string name="app_resetted_message">Riavvio, app resettata</string>
+
+    <string name="app_deletion_title">Conferma reset applicazione</string>
+    <string name="app_deletion_message">Questo processo è irreversibile, se confermi tutte le impostazioni verranno cancellate</string>
+
+    <string name="reset">Resetta</string>
+    <string name="errorAlreadySynchronizing">File già in caricamento</string>
+
+    <string name="profile_upload_error">Errore nel caricamento dei dati del profilo, riprova</string>
+    <string name="profile_upload_error_retry">Riprova</string>
+
+    <string name="challenges_ongoing_settings_title">In corso</string>
+    <string name="challenges_available_settings_title">Disponibili</string>
+    <string name="challenges_completed_settings_title">Completate</string>
+    <string name="challenges_expired_settings_title">Scadute</string>
+
+    <string name="challenges_ongoing_settings_summary" formatted="false">Hai %s sfide a cui partecipare</string>
+    <string name="challenges_no_ongoing_settings_summary">Non ci sono sfide a cui partecipare al momento</string>
+    <string name="challenges_available_settings_summary" formatted="false">Ci sono %s sfide disponibili</string>
+    <string name="no_challenges_available" formatted="false">Non ci sono nuove sfide disponibili al momento</string>
+    <string name="challenges_completed_settings_summary" formatted="false">Hai %s sfide complete</string>
+    <string name="challenges_expired_settings_summary" formatted="false">Hai %s sfide scadute</string>
+
+    <string name="message_unread_settings_summary" formatted="false">Hai %s messaggi da leggere</string>
+    <string name="message_unread_settings_title">Non letti</string>
+    <string name="message_read_settings_summary" formatted="false">Hai %s messaggi letti</string>
+    <string name="message_read_settings_title">Letti</string>
+
+    <string name="errorDownloadingAvailableChallenges" formatted="false">Errore nello scaricare le sfide disponibili, riprovare successivamente</string>
+
+    <string name="tasks_solved_settings_summary" formatted="false">Hai %s risposte incomplete</string>
+    <string name="tasks_solved_settings_title">Incomplete</string>
+    <string name="tasks_unsolved_settings_summary" formatted="false">Hai %s risposte complete</string>
+    <string name="tasks_unsolved_settings_title">Complete</string>
+
+    <string name="relogin_message">Per favore effettua di nuovo il Login con il tuo account Google</string>
+    <string name="available_challenges_loading">Sto caricando le sfide...</string>
+
+    <string name="tasks_no_unsolved_settings_summary" formatted="false">Non hai risposte incomplete</string>
+    <string name="tasks_no_solved_settings_summary" formatted="false">Non hai risposte complete</string>
+    <string name="message_no_read_settings_summary" formatted="false">Non hai messaggi letti</string>
+    <string name="message_no_unread_settings_summary" formatted="false">Non hai messaggi da leggere</string>
+    <string name="challenges_no_available_settings_summary" formatted="false">Non hai sfide attive</string>
+    <string name="challenges_no_completed_settings_summary" formatted="false">Non hai sfide complete</string>
+    <string name="challenges_no_expired_settings_summary" formatted="false">Non hai sfide scadute</string>
+
+    <string name="participateChallenge" formatted="false">Partecipa</string>
+    <string name="add_contribution">Contribuisci</string>
+
+    <string name="already_constraints" formatted="false">Hai gia\' dato %s risposte negli ultimi %s %s, riprova tra %s</string>
+    <string name="already_constraints_no_variables">Hai raggiunto il limite di risposte per questa challenge, riprova piu\' tardi</string>
+
+    <string name="timediaries_settings_title">Diari del tempo</string>
+    <string name="timediaries_unsolved_settings_summary" formatted="false">Ci sono %s diari del tempo da compilare</string>
+    <string name="timediaries_unsolved_settings_title" formatted="false">Da compilare</string>
+    <string name="timediaries_solved_settings_summary" formatted="false">Ci sono %s diari del tempo compilati</string>
+    <string name="timediaries_solved_settings_title" formatted="false">Compilati</string>
+    <string name="timediaries_expired_settings_summary" formatted="false">Ci sono %s diari del tempo scaduti</string>
+    <string name="timediaries_expired_settings_title" formatted="false">Scaduti</string>
+
+    <string name="timediaries_no_unsolved_settings_summary" formatted="false">Non ci sono diari del tempo da compilare</string>
+    <string name="timediaries_no_solved_settings_summary" formatted="false">Non ci sono diari del tempo compilati</string>
+    <string name="timediaries_no_expired_settings_summary" formatted="false">Non ci sono diari del tempo scaduti</string>
+
+    <string name="tasks_expired_settings_summary" formatted="false">Ci sono %s domande scadute</string>
+    <string name="tasks_expired_settings_title" formatted="false">Scadute</string>
+    <string name="tasks_no_expired_settings_summary" formatted="false">Non ci sono domande scadute</string>
+
+    <string name="messages_expired_settings_summary" formatted="false">Ci sono %s messaggi scaduti</string>
+    <string name="messages_expired_settings_title" formatted="false">Scaduti</string>
+    <string name="messages_no_expired_settings_summary" formatted="false">Non ci sono messaggi scaduti</string>
+
+    <string name="enable_dump" formatted="false">Clicca altre %s volte per abilitare il dump dei file</string>
+    <string name="challenges_check" formatted="false">Clicca per verificare la presenza di nuove sfide</string>
+
+    <string name="challenges_checking" formatted="false">Sto controllando la presenza di nuove sfide</string>
+
+    <string name="minutes"> minuti</string>
+    <string name="seconds"> secondi</string>
+    <string name="hours"> ore</string>
+    <string name="days"> giorni</string>
+
+    <string name="challenges_completed" formatted="true">Sfida completata</string>
+    <string name="challenges_completed_on" formatted="true">Sfida completata il %s, risultato %s</string>
+    <string name="challenges_expired_on" formatted="true">Sfida scaduta il %s</string>
+    <string name="challenges_started_on" formatted="true">Sfida cominciata il %s</string>
+    <string name="challenges_ongoing_status" formatted="true">Questa sfida ha %s contributi su %s</string>
+    <string name="challenges_ongoing_freeroam_status" formatted="true">Hai fornito %s contributi per questa sfida</string>
+
+    <string name="trackingActivated">Tracciamento attivo</string>
+    <string name="reload_message">Ricarica posizione</string>
+
+    <string name="loading_map_challenge">Sto cercando una posizione piu\' accurata...</string>
+    <string name="loaded_map_challenge">Posizione accurata trovata</string>
+</resources>
+

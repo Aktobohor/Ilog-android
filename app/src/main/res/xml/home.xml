@@ -1,0 +1,115 @@
+<?xml version="1.0" encoding="utf-8"?>
+<PreferenceScreen 
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:key="pref_home_preferencescreen">
+
+	<PreferenceCategory
+		android:title="@string/challenges_settings_title">
+
+		<PreferenceScreen
+			android:persistent="true"
+			android:summary="@string/challenges_ongoing_settings_summary"
+			android:key="pref_challenges_ongoing_preferencescreen"
+			android:title="@string/challenges_ongoing_settings_title" >
+		</PreferenceScreen>
+		<PreferenceScreen
+			android:persistent="true"
+			android:summary="@string/challenges_available_settings_summary"
+			android:key="pref_challenges_available_preferencescreen"
+			android:title="@string/challenges_available_settings_title" >
+		</PreferenceScreen>
+		<PreferenceScreen
+			android:persistent="true"
+			android:summary="@string/challenges_completed_settings_summary"
+			android:key="pref_challenges_completed_preferencescreen"
+			android:title="@string/challenges_completed_settings_title" >
+		</PreferenceScreen>
+
+		<PreferenceScreen
+			android:persistent="true"
+			android:summary="@string/challenges_expired_settings_summary"
+			android:key="pref_challenges_expired_preferencescreen"
+			android:title="@string/challenges_expired_settings_title" >
+		</PreferenceScreen>
+	</PreferenceCategory>
+
+	<PreferenceCategory
+		android:title="@string/timediaries_settings_title">
+		<PreferenceScreen
+			android:persistent="true"
+			android:summary="@string/timediaries_unsolved_settings_summary"
+			android:key="pref_timediaries_unsolved_preferencescreen"
+			android:title="@string/timediaries_unsolved_settings_title" >
+		</PreferenceScreen>
+		<PreferenceScreen
+			android:persistent="true"
+			android:summary="@string/timediaries_solved_settings_summary"
+			android:key="pref_timediaries_solved_preferencescreen"
+			android:title="@string/timediaries_solved_settings_title" >
+		</PreferenceScreen>
+		<PreferenceScreen
+			android:persistent="true"
+			android:summary="@string/timediaries_expired_settings_summary"
+			android:key="pref_timediaries_expired_preferencescreen"
+			android:title="@string/timediaries_expired_settings_title" >
+		</PreferenceScreen>
+	</PreferenceCategory>
+
+    <PreferenceCategory
+        android:title="@string/tasks_settings_title">
+	<PreferenceScreen
+		android:persistent="true"
+		android:summary="@string/tasks_unsolved_settings_summary"
+		android:key="pref_tasks_unsolved_preferencescreen"
+		android:title="@string/tasks_unsolved_settings_title" >
+	</PreferenceScreen>
+	<PreferenceScreen
+		android:persistent="true"
+		android:summary="@string/tasks_solved_settings_summary"
+		android:key="pref_tasks_solved_preferencescreen"
+		android:title="@string/tasks_solved_settings_title" >
+	</PreferenceScreen>
+	<PreferenceScreen
+		android:persistent="true"
+		android:summary="@string/tasks_expired_settings_summary"
+		android:key="pref_tasks_expired_preferencescreen"
+		android:title="@string/tasks_expired_settings_title" >
+	</PreferenceScreen>
+    </PreferenceCategory>
+
+    <PreferenceCategory
+        android:title="@string/message_settings_title">
+	<PreferenceScreen
+		android:persistent="true"
+		android:summary="@string/message_unread_settings_summary"
+		android:key="pref_message_unread_preferencescreen"
+		android:title="@string/message_unread_settings_title" >
+	</PreferenceScreen>
+	<PreferenceScreen
+		android:persistent="true"
+		android:summary="@string/message_read_settings_summary"
+		android:key="pref_message_read_preferencescreen"
+		android:title="@string/message_read_settings_title" >
+	</PreferenceScreen>
+	<PreferenceScreen
+		android:persistent="true"
+		android:summary="@string/messages_expired_settings_summary"
+		android:key="pref_message_expired_preferencescreen"
+		android:title="@string/messages_expired_settings_title" >
+	</PreferenceScreen>
+
+	<!--<it.unitn.disi.witmee.sensorlog.elements.PreferenceWithButtons
+		android:persistent="true"
+		android:summary="@string/message_read_settings_summary"
+		android:key="pref_message_read_preferencescreen"
+		android:title="@string/message_read_settings_title" >
+	</it.unitn.disi.witmee.sensorlog.elements.PreferenceWithButtons>
+
+		<it.unitn.disi.witmee.sensorlog.elements.PreferenceWithButtons
+			android:persistent="true"
+			android:summary="@string/message_read_settings_summary"
+			android:key="pref_message_read_preferencescreen"
+			android:title="@string/message_read_settings_title" >
+		</it.unitn.disi.witmee.sensorlog.elements.PreferenceWithButtons>-->
+    </PreferenceCategory>
+</PreferenceScreen>

@@ -1,0 +1,105 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent" android:layout_height="match_parent">
+
+    <CheckedTextView
+        android:id="@+id/loginTextView"
+        android:layout_width="250sp"
+        android:layout_height="wrap_content"
+        android:layout_above="@+id/consentTextView"
+        android:layout_centerHorizontal="true"
+        android:checkMark="?android:attr/listChoiceIndicatorMultiple"
+        android:gravity="center_vertical"
+        android:padding="20sp"
+        android:text="CheckedTextView"
+        android:textSize="20sp"
+        android:textStyle="bold" />
+
+    <TextView
+        android:id="@+id/confirmationTextView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true"
+        android:paddingBottom="20sp"
+        android:paddingLeft="10sp"
+        android:paddingRight="10sp"
+        android:text="Button"
+        android:textColor="#57213d"
+        android:textSize="20sp"
+        android:textStyle="bold" />
+
+    <TextView
+        android:id="@+id/welcomeTextView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textSize="24sp"
+        android:padding="15sp"
+        android:textColor="#57213d"
+        android:textStyle="bold"
+        android:layout_centerHorizontal="true"
+        android:paddingTop="0px"
+        android:gravity="top"
+        android:text="Welcome" />
+
+    <TextView
+        android:id="@+id/informedConsentTextView"
+        android:layout_width="wrap_content"
+        android:textSize="15sp"
+        android:paddingTop="10sp"
+        android:paddingRight="10sp"
+        android:paddingLeft="10sp"
+        android:textStyle="bold"
+        android:layout_height="0dp"
+        android:layout_below="@+id/welcomeTextView"
+        android:layout_centerHorizontal="true"
+        android:layout_above="@+id/loginTextView"
+        android:gravity="center"
+        android:paddingBottom="30sp"
+        android:scrollbars = "vertical"
+        android:text="TextView" />
+
+    <CheckedTextView
+        android:id="@+id/consentTextView"
+        android:layout_width="250sp"
+        android:layout_height="wrap_content"
+        android:text="CheckedTextView"
+        android:textStyle="bold"
+        android:textSize="20sp"
+        android:padding="20sp"
+        android:enabled="false"
+        android:gravity="center_vertical"
+        android:checkMark="?android:attr/listChoiceIndicatorMultiple"
+        android:layout_centerHorizontal="true"
+        android:layout_above="@+id/permissionsTextView" />
+
+    <CheckedTextView
+        android:id="@+id/profileTextView"
+        android:layout_width="250sp"
+        android:layout_height="wrap_content"
+        android:checkMark="?android:attr/listChoiceIndicatorMultiple"
+        android:text="CheckedTextView"
+        android:textSize="20sp"
+        android:padding="20sp"
+        android:enabled="false"
+        android:gravity="center_vertical"
+        android:textStyle="bold"
+        android:layout_centerHorizontal="true"
+        android:layout_above="@+id/confirmationTextView"/>
+
+    <CheckedTextView
+        android:id="@+id/permissionsTextView"
+        android:layout_width="250sp"
+        android:layout_height="wrap_content"
+        android:checkMark="?android:attr/listChoiceIndicatorMultiple"
+        android:text="CheckedTextView"
+        android:textSize="20sp"
+        android:padding="20sp"
+        android:enabled="false"
+        android:gravity="center_vertical"
+        android:textStyle="bold"
+        android:layout_centerHorizontal="true"
+        android:layout_above="@+id/profileTextView" />
+
+</RelativeLayout>

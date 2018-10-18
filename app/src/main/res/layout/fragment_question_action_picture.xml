@@ -1,0 +1,18 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:orientation="horizontal"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent">
+
+    <FrameLayout
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        android:layout_below="@+id/subQuestion"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+        <SurfaceView android:id="@+id/surfaceView" android:layout_width="wrap_content" android:layout_height="wrap_content"></SurfaceView>
+        <LinearLayout android:id="@+id/linearLayout1" android:layout_gravity="bottom|center_horizontal" android:layout_width="wrap_content" android:layout_height="wrap_content">
+            <ImageButton android:text="Button" android:id="@+id/buttonShot" android:background="@null" android:layout_width="match_parent" android:layout_height="match_parent"></ImageButton>
+        </LinearLayout>
+    </FrameLayout>
+</RelativeLayout>

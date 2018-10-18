@@ -1,0 +1,220 @@
+<?xml version="1.0" encoding="utf-8"?>
+<PreferenceScreen
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:key="pref_main_preferencescreen">
+
+    <PreferenceCategory
+        android:title="@string/sensors_settings" >
+        <CheckBoxPreference
+            android:title="@string/sensors_accelerometer_settings"
+            android:defaultValue="false"
+            android:selectable="true"
+            android:summary="@string/sensors_accelerometer_summary_settings"
+            android:key="@string/pref_sensors_accelerometer" />
+        <CheckBoxPreference
+            android:title="@string/sensors_linearacceleration_settings"
+            android:defaultValue="false"
+            android:selectable="true"
+            android:summary="@string/sensors_linearacceleration_summary_settings"
+            android:key="@string/pref_sensors_linearacceleration" />
+        <!--<CheckBoxPreference
+            android:title="@string/sensors_accelerometer_gear_settings"
+            android:defaultValue="false"
+            android:selectable="true"
+            android:summary="@string/sensors_accelerometer_summary_settings"
+            android:key="@string/pref_sensors_accelerometer_gear" />-->
+        <CheckBoxPreference
+            android:title="@string/sensors_gyroscope_settings"
+            android:defaultValue="false"
+            android:selectable="true"
+            android:summary="@string/sensors_gyroscope_summary_settings"
+            android:key="@string/pref_sensors_gyroscope" />
+        <!--<CheckBoxPreference
+            android:title="@string/sensors_gyroscope_gear_settings"
+            android:defaultValue="false"
+            android:selectable="true"
+            android:summary="@string/sensors_gyroscope_summary_settings"
+            android:key="@string/pref_sensors_gyroscope_gear" />-->
+        <CheckBoxPreference
+            android:title="@string/sensors_gravity_settings"
+            android:defaultValue="false"
+            android:selectable="true"
+            android:summary="@string/sensors_gravity_summary_settings"
+            android:key="@string/pref_sensors_gravity" />
+        <CheckBoxPreference
+            android:title="@string/sensors_rotationvector_settings"
+            android:defaultValue="false"
+            android:selectable="true"
+            android:summary="@string/sensors_rotationvector_summary_settings"
+            android:key="@string/pref_sensors_rotationvector" />
+        <CheckBoxPreference
+            android:title="@string/sensors_magneticfield_settings"
+            android:defaultValue="false"
+            android:selectable="true"
+            android:summary="@string/sensors_magneticfield_summary_settings"
+            android:key="@string/pref_sensors_magneticfield" />
+        <CheckBoxPreference
+            android:title="@string/sensors_orientation_settings"
+            android:defaultValue="false"
+            android:selectable="true"
+            android:summary="@string/sensors_orientation_summary_settings"
+            android:key="@string/pref_sensors_orientation" />
+        <CheckBoxPreference
+            android:title="@string/sensors_proximity_settings"
+            android:defaultValue="false"
+            android:selectable="true"
+            android:summary="@string/sensors_proximity_summary_settings"
+            android:key="@string/pref_sensors_proximity" />
+        <CheckBoxPreference
+            android:title="@string/sensors_temperature_settings"
+            android:defaultValue="false"
+            android:selectable="true"
+            android:summary="@string/sensors_temperature_summary_settings"
+            android:key="@string/pref_sensors_termometer" />
+        <CheckBoxPreference
+            android:title="@string/sensors_light_settings"
+            android:defaultValue="false"
+            android:selectable="true"
+            android:summary="@string/sensors_light_summary_settings"
+            android:key="@string/pref_sensors_light" />
+        <CheckBoxPreference
+            android:title="@string/sensors_pressure_settings"
+            android:defaultValue="false"
+            android:selectable="true"
+            android:summary="@string/sensors_pressure_summary_settings"
+            android:key="@string/pref_sensors_pressure" />
+        <CheckBoxPreference
+            android:title="@string/sensors_humidity_settings"
+            android:defaultValue="false"
+            android:selectable="true"
+            android:summary="@string/sensors_humidity_summary_settings"
+            android:key="@string/pref_sensors_humidity" />
+
+    </PreferenceCategory>
+
+    <PreferenceCategory
+        android:title="@string/positioning_settings" >
+        <CheckBoxPreference
+            android:title="@string/positioning_gps_settings"
+            android:defaultValue="false"
+            android:selectable="true"
+            android:summary="@string/positioning_gps_summary_settings"
+            android:key="@string/pref_sensors_gps" />
+
+        <CheckBoxPreference
+            android:title="@string/positioning_network_settings"
+            android:defaultValue="false"
+            android:selectable="true"
+            android:summary="@string/positioning_network_summary_settings"
+            android:key="@string/pref_sensors_network" />
+    </PreferenceCategory>
+
+    <PreferenceCategory
+        android:title="@string/ambience_settings" >
+        <CheckBoxPreference
+            android:title="@string/ambience_wifi_settings"
+            android:defaultValue="false"
+            android:selectable="true"
+            android:summary="@string/ambience_wifi_summary_settings"
+            android:key="@string/pref_sensors_ambience" />
+        <CheckBoxPreference
+            android:title="@string/networks_wifi_settings"
+            android:defaultValue="false"
+            android:selectable="true"
+            android:summary="@string/networks_wifi_summary_settings"
+            android:key="@string/pref_sensors_networks" />
+    </PreferenceCategory>
+
+    <PreferenceCategory
+        android:title="@string/social_settings" >
+        <CheckBoxPreference
+            android:title="@string/social_bluetooth_settings"
+            android:defaultValue="false"
+            android:selectable="true"
+            android:summary="@string/social_bluetooth_summary_settings"
+            android:key="@string/pref_sensors_bluetooth" />
+        <CheckBoxPreference
+            android:title="@string/social_bluetooth_le_settings"
+            android:defaultValue="false"
+            android:selectable="true"
+            android:summary="@string/social_bluetooth_le_summary_settings"
+            android:key="@string/pref_sensors_bluetooth_le" />
+    </PreferenceCategory>
+
+    <!--
+    <PreferenceCategory
+        android:title="@string/calendar_settings" >
+        <CheckBoxPreference
+            android:title="@string/calendar_settings"
+            android:defaultValue="false"
+            android:selectable="true"
+            android:summary="@string/calendar_summary_settings"
+            android:key="@string/pref_sensors_calendar" />
+    </PreferenceCategory>
+    -->
+    <PreferenceCategory
+        android:title="@string/calls_settings" >
+        <CheckBoxPreference
+            android:title="@string/calls_in_settings"
+            android:defaultValue="false"
+            android:selectable="true"
+            android:summary="@string/calls_in_summary_settings"
+            android:key="@string/pref_sensors_calls_in" />
+        <CheckBoxPreference
+            android:title="@string/calls_out_settings"
+            android:defaultValue="false"
+            android:selectable="true"
+            android:summary="@string/calls_out_summary_settings"
+            android:key="@string/pref_sensors_calls_out" />
+    </PreferenceCategory>
+
+    <PreferenceCategory
+        android:title="@string/sms_settings" >
+        <CheckBoxPreference
+            android:title="@string/sms_in_settings"
+            android:defaultValue="false"
+            android:selectable="true"
+            android:summary="@string/sms_in_summary_settings"
+            android:key="@string/pref_sensors_sms_in" />
+        <CheckBoxPreference
+            android:title="@string/sms_out_settings"
+            android:defaultValue="false"
+            android:selectable="true"
+            android:summary="@string/sms_out_summary_settings"
+            android:key="@string/pref_sensors_sms_out" />
+    </PreferenceCategory>
+
+    <PreferenceCategory
+        android:title="@string/smartphone_usage_settings" >
+        <CheckBoxPreference
+            android:title="@string/app_running_settings"
+            android:defaultValue="false"
+            android:selectable="true"
+            android:summary="@string/app_usage_summary_settings"
+            android:key="@string/pref_sensors_app_usage" />
+        <CheckBoxPreference
+            android:title="@string/screen_running_settings"
+            android:defaultValue="false"
+            android:selectable="true"
+            android:summary="@string/screen_usage_summary_settings"
+            android:key="@string/pref_sensors_screen_usage" />
+    </PreferenceCategory>
+
+    <PreferenceCategory
+        android:title="@string/audio_settings" >
+        <CheckBoxPreference
+            android:title="@string/audio_settings"
+            android:defaultValue="false"
+            android:selectable="true"
+            android:summary="@string/audio_summary_settings"
+            android:key="@string/pref_sensors_audio" />
+        <!--<CheckBoxPreference
+			android:title="@string/audio_gear_settings"
+			android:defaultValue="false"
+			android:selectable="true"
+			android:summary="@string/audio_summary_settings"
+			android:key="@string/pref_sensors_audio_gear" />-->
+    </PreferenceCategory>
+
+
+</PreferenceScreen>

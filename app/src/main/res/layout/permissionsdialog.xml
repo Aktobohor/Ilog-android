@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="260sp"
+    android:layout_height="360sp"
+    android:id="@+id/dialogPermissions"
+    android:orientation="vertical">
+
+    <TextView
+        android:id="@+id/confirmationTextView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="CONTINUE"
+        android:paddingBottom="20sp"
+        android:paddingRight="30sp"
+        android:textSize="15sp"
+        android:textColor="#57213d"
+        android:textStyle="bold"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentEnd="true" />
+
+    <TextView
+        android:id="@+id/messageTextView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:paddingRight="20sp"
+        android:paddingLeft="20sp"
+        android:paddingTop="130sp"
+        android:textSize="15sp"
+        android:text="test"
+        android:layout_above="@+id/confirmationTextView"
+        android:layout_alignParentTop="true"
+        android:layout_centerHorizontal="true" />
+
+    <TextView
+        android:id="@+id/goToSettings"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:paddingBottom="20sp"
+        android:paddingRight="10sp"
+        android:text="GO TO SETTINGS"
+        android:visibility="invisible"
+        android:textColor="#57213d"
+        android:textSize="15sp"
+        android:textStyle="bold"
+        android:layout_alignParentBottom="true"
+        android:layout_toStartOf="@+id/confirmationTextView" />
+
+</RelativeLayout>

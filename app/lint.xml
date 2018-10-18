@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="utf-8"?>
+<lint>
+    <issue id="HandlerLeak" severity="ignore" />
+    <issue id="SetJavaScriptEnabled" severity="ignore" />
+    <issue id="SimpleDateFormat">
+        <ignore path="src/it/unitn/disi/witmee/sensorlog/activities/MainActivity.java" />
+    </issue>
+</lint>

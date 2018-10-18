@@ -1,0 +1,419 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">i-Log</string>
+
+    <!--section/tabs names-->
+    <string name="settings">Settings</string>
+    <string name="sensing">Sensing</string>
+
+    <!--authentication texts-->
+    <string name="username">User name</string>
+    <string name="password">Password</string>
+    <string name="login">Login</string>
+    <string name="logout">Logout</string>
+
+    <string name="notification_sleep_settings">Notifications</string>
+    <string name="notification_settings_title">Sleeping</string>
+    <string name="notification_settings_subtitle">Snooze notifications</string>
+    <string name="notification_settings_subtitle_for" formatted="false">Snooze notifications for %d hours until %s</string>
+    <string name="notification_settings_toast" formatted="false">Notifications will be snoozed until %s</string>
+    <string name="notification_settings_toast_reset" formatted="false">Notifications are no longer snoozed</string>
+    <string name="notification_settings_dialog">How long will you sleep for?</string>
+
+
+    <!--Settings menu-->
+    <string name="user_settings">User</string>
+    <string name="application_settings">Application</string>
+    <string name="data_settings">Data</string>
+    <string name="sensors_settings">Sensing</string>
+    <string name="positioning_settings">Positioning</string>
+    <string name="ambience_settings">Ambience</string>
+    <string name="social_settings">Social</string>
+    <string name="social_bluetooth_settings">Bluetooth</string>
+    <string name="social_bluetooth_le_settings">Bluetooth LE</string>
+    <string name="logs_value_settings">Manage Logs</string>
+    <string name="logs_settings">Logs</string>
+    <string name="sync_logs">Sync Logs</string>
+    <string name="delete_archive_files">Delete Archive Files</string>
+    <string name="sync_logs_summary">Sync Logs with the Server</string>
+    <string name="delete_archive_files_summary"></string>
+    <string name="dump_archive_files_summary">Click to dump the logs to the sd card, do it only if you are required to!</string>
+    <string name="dump_archive_files">Dump Files</string>
+    <string name="notification_settings">SETTINGS</string>
+    <string name="notification_stop">STOP</string>
+    <string name="notification_home">CONTRIBUTIONS</string>
+
+    <string name="tasks_settings_summary">Manage tasks</string>
+    <string name="tasks_settings_title">Tasks</string>
+    <string name="tasks_settings_solved_summary">Manage solved tasks</string>
+    <string name="tasks_settings_solved_title">Solved tasks</string>
+    <string name="tasks_settings_unsolved_summary">Manage unsolved tasks</string>
+    <string name="tasks_settings_unsolved_title">Unsolved tasks</string>
+    <string name="news_settings_summary">Check news</string>
+    <string name="news_settings_title">News</string>
+    <string name="message_settings_summary">Check messages</string>
+    <string name="message_settings_title">Messages</string>
+    <string name="channel_name">i-Log NotificationChannel</string>
+    <string name="channel_description">And this is the channel description</string>
+
+    <string name="challenges_settings_summary">Manage challenges</string>
+    <string name="challenges_settings_title">Challenges</string>
+    <string name="time_diaries_summary">Manage time diaries</string>
+    <string name="time_diaries_settings_title">Time diaries</string>
+    <string name="messages_settings_summary">Check messages</string>
+    <string name="messages_settings_title">Messages</string>
+
+    <string name="pref_sensors_sensors_settings">pref_sensors_sensors_settings</string>
+    <string name="pref_sensors_positioning_settings">pref_sensors_positioning_settings</string>
+    <string name="pref_sensors_ambience_settings">pref_sensors_ambience_settings</string>
+    
+    <string name="positioning_gps_settings">GPS</string>
+    <string name="positioning_gps_summary_settings">Logging not in progress.</string>
+    <string name="positioning_network_settings">Network</string>
+    <string name="positioning_network_summary_settings">Logging not in progress.</string>
+    <string name="ambience_wifi_settings">WI-FI</string>
+    <string name="networks_wifi_settings">WI-FI Networks</string>
+    <string name="ambience_wifi_summary_settings">Logging not in progress.</string>
+    <string name="networks_wifi_summary_settings">Logging not in progress.</string>
+    <string name="sensors_accelerometer_settings">Accelerometer</string>
+    <string name="sensors_accelerometer_summary_settings">Logging not in progress.</string>
+    <string name="sensors_step_counter_settings">Step Counter</string>
+    <string name="sensors_step_counter_summary_settings">Logging not in progress.</string>
+    <string name="sensors_step_detector_settings">Step Detector</string>
+    <string name="sensors_step_detector_summary_settings">Logging not in progress.</string>
+    <string name="sensors_gravity_settings">Gravity</string>
+    <string name="sensors_gravity_summary_settings">Logging not in progress.</string>
+    <string name="sensors_gyroscope_settings">Gyroscope</string>
+    <string name="sensors_gyroscope_summary_settings">Logging not in progress.</string>
+    <string name="sensors_linearacceleration_settings">Linear acceleration</string>
+    <string name="sensors_linearacceleration_summary_settings">Logging not in progress.</string>
+    <string name="sensors_rotationvector_settings">Rotation vector</string>
+    <string name="sensors_rotationvector_summary_settings">Logging not in progress.</string>
+    <string name="sensors_magneticfield_settings">Magnetic field</string>
+    <string name="sensors_magneticfield_summary_settings">Logging not in progress.</string>
+    <string name="sensors_orientation_settings">Orientation</string>
+    <string name="sensors_orientation_summary_settings">Logging not in progress.</string>
+    <string name="sensors_proximity_settings">Proximity</string>
+    <string name="sensors_proximity_summary_settings">Logging not in progress.</string>
+    <string name="sensors_temperature_settings">Temperature</string>
+    <string name="sensors_temperature_summary_settings">Logging not in progress.</string>
+    <string name="sensors_light_settings">Light</string>
+    <string name="sensors_light_summary_settings">Logging not in progress.</string>
+    <string name="sensors_pressure_settings">Pressure</string>
+    <string name="sensors_pressure_summary_settings">Logging not in progress.</string>
+    <string name="sensors_humidity_settings">Humidity</string>
+    <string name="sensors_humidity_summary_settings">Logging not in progress.</string>
+    <string name="audio_settings">Audio</string>
+    <string name="audio_summary_settings">Logging not in progress.</string>
+    <string name="audio_gear_settings">Audio (Gear)</string>
+    <string name="sensors_accelerometer_gear_settings">Accelerometer (Gear)</string>
+    <string name="sensors_gyroscope_gear_settings">Gyroscope (Gear)</string>
+    <string name="calendar_settings">Calendar</string>
+    <string name="calls_settings">Calls</string>
+    <string name="calls_in_settings">Incoming Calls</string>
+    <string name="calls_out_settings">Outgoing Calls</string>
+    <string name="sms_settings">Sms</string>
+    <string name="sms_in_settings">Incoming Sms</string>
+    <string name="sms_out_settings">Outgoing Sms</string>
+    <string name="smartphone_usage_settings">Smartphone Usage</string>
+    <string name="app_running_settings">Running Application</string>
+    <string name="screen_running_settings">Screen Status</string>
+    <string name="calendar_summary_settings">Logging not in progress.</string>
+    <string name="calls_in_summary_settings">Logging not in progress.</string>
+    <string name="calls_out_summary_settings">Logging not in progress.</string>
+    <string name="sms_in_summary_settings">Logging not in progress.</string>
+    <string name="sms_out_summary_settings">Logging not in progress.</string>
+    <string name="app_usage_summary_settings">Logging not in progress.</string>
+    <string name="screen_usage_summary_settings">Logging not in progress.</string>
+    <string name="social_bluetooth_summary_settings">Logging not in progress.</string>
+    <string name="social_bluetooth_le_summary_settings">Logging not in progress.</string>
+    <string name="sensors_livemodality_summary_settings">Send data in real-time</string>
+    <string name="sensors_demomodality_summary_settings">Activate Demo ISWC</string>
+
+    <string name="permissions_summary_title">Manage Permissions</string>
+    <string name="permissions_settings_title">Permissions</string>
+
+    <string name="server_client_id">132157554409-rn2bf9mjqi3c2uvlvaa8sgtm9hren23n.apps.googleusercontent.com</string>
+
+    <string-array name="logging_modality_settings">
+        <item>Log Nothing</item>
+        <item>Normal</item>
+        <item>Normal + GPS Optimized</item>
+        <item>Fastest</item>
+    </string-array>
+     <string-array name="logging_modality_values_settings">
+        <item>Log Nothing</item>
+        <item>Normal</item>
+        <item>Normal + GPS Optimized</item>
+        <item>Fastest</item>
+    </string-array>
+    
+    <!--Preference Menu Keys-->
+    <string name="pref_login_button">pref_login_button</string>
+    <string name="pref_logging_list">pref_logging_list</string>
+    <string name="pref_update_status">pref_update_status</string>
+    <string name="pref_update_current">pref_update_current</string>
+    <string name="pref_update_latest">pref_update_latest</string>
+    <string name="pref_update_button">pref_update_button</string>
+    <string name="pref_log_sync">pref_log_sync</string>
+    <string name="pref_main_preferencescreen">pref_main_preferencescreen</string>
+    <string name="pref_sensors_accelerometer">pref_sensors_accelerometer</string>
+    <string name="pref_sensors_termometer">pref_sensors_termometer</string>
+    <string name="pref_sensors_gravity">pref_sensors_gravity</string>
+    <string name="pref_sensors_gyroscope">pref_sensors_gyroscope</string>
+    <string name="pref_sensors_linearacceleration">pref_sensors_linearacceleration</string>
+    <string name="pref_sensors_rotationvector">pref_sensors_rotationvector</string>
+    <string name="pref_sensors_magneticfield">pref_sensors_magneticfield</string>
+    <string name="pref_sensors_orientation">pref_sensors_orientation</string>
+    <string name="pref_sensors_proximity">pref_sensors_proximity</string>
+    <string name="pref_sensors_light">pref_sensors_light</string>
+    <string name="pref_sensors_pressure">pref_sensors_pressure</string>
+    <string name="pref_sensors_humidity">pref_sensors_humidity</string>
+    <string name="pref_sensors_gps">pref_sensors_gps</string>
+    <string name="pref_sensors_network">pref_sensors_network</string>
+    <string name="pref_sensors_networks">pref_sensors_networks</string>
+    <string name="pref_sensors_ambience">pref_sensors_ambience</string>
+    <string name="pref_sensors_audio">pref_sensors_audio</string>
+    <string name="pref_sensors_audio_gear">pref_sensors_audio_gear</string>
+    <string name="pref_sensors_calendar">pref_sensors_calendar</string>
+    <string name="pref_sensors_step_counter">pref_sensors_step_counter</string>
+    <string name="pref_sensors_step_detector">pref_sensors_step_detector</string>
+    <string name="pref_sensors_calls_in">pref_sensors_calls_in</string>
+    <string name="pref_sensors_calls_out">pref_sensors_calls_out</string>
+    <string name="pref_sensors_sms_in">pref_sensors_sms_in</string>
+    <string name="pref_sensors_sms_out">pref_sensors_sms_out</string>
+    <string name="pref_sensors_app_usage">pref_sensors_app_usage</string>
+    <string name="pref_sensors_screen_usage">pref_sensors_screen_usage</string>
+    <string name="pref_sensors_accelerometer_gear">pref_sensors_accelerometer_gear</string>
+    <string name="pref_sensors_gyroscope_gear">pref_sensors_gyroscope_gear</string>
+    <string name="pref_sensors_bluetooth">pref_sensors_bluetooth</string>
+    <string name="pref_sensors_bluetooth_le">pref_sensors_bluetooth_le</string>
+    <string name="pref_livemodality_sensor">pref_livemodality_sensor</string>
+    <string name="pref_demomodality_sensor">pref_demomodality_sensor</string>
+    <string name="pref_log_delete_archive">pref_log_delete_archive</string>
+    <string name="pref_log_app_version">pref_log_app_version</string>
+    
+    <!--Bluetooth-->
+    <string name="bluetooth_pair_summary">Select Device Name</string>
+    <string name="bluetooth_pair_title">Selected Device</string>
+    <string name="bluetooth_connect_title">Connect to device</string>
+    <string name="bluetooth_disconnect_title">Disconnect from device</string>
+    <string name="bluetooth_value_settings">Disconnected</string>
+    <string name="bluetooth_settings">Bluetooth devices</string>
+    	            
+    <string name="json">json</string>
+    
+    <string name="selectedDate">selectedDate</string>
+
+    <string name="previous">Previous</string>
+    <string name="next">Next</string>
+    <string name="finish">Finish</string>
+    <string name="close">Close</string>
+
+    <string name="google_maps_key">AIzaSyCBQwpjJIgCrANb-SoFFzQnwA5ciHNCx2A</string>
+
+    <string name="questionnaireNotificationTitle">Time diary</string>
+    <string name="messageNotificationTitle">Message</string>
+    <string name="questionnaireNotificationSubtitle" formatted="false">You have %d question(s) to answer to</string>
+    <string name="mainNotificationTitle">i-Log</string>
+    <string name="mainNotificationSubTitle" formatted="false">Today you used the app for %d h and %d m</string>
+    <string name="taskNotificationTitle">Tasks</string>
+    <string name="taskNotificationSubtitle" formatted="false">You have %d task(s) to solve</string>
+    <string name="messageNotificationSubtitle" formatted="false">You have %d message(s) to read</string>
+    <string name="loggingProgress">Logging in progress.</string>
+    <string name="loggingNotProgress">Logging not in progress.</string>
+    <string name="deleteArchive">Delete archive files?</string>
+    <string name="affirmativeAnswer">Yes</string>
+    <string name="negativeAnswer">No</string>
+    <string name="cancelAnswer">Cancel</string>
+    <string name="archiveDeleteSuccess">Archive files deleted successfully</string>
+    <string name="archiveDeleteError">Some archive files NOT deleted</string>
+    <string name="loginAs">Logged in as </string>
+    <string name="loginAsk">Please login to use the application</string>
+    <string name="loginSuccess">Login successful</string>
+    <string name="loginError">Login error</string>
+    <string name="syncNoFiles">No files to sync with the server</string>
+    <string name="syncFiles">files to sync with the server</string>
+    <string name="userInformation">User Information</string>
+
+    <string name="question">Question</string>
+    <string name="question1">What did you do at</string>
+    <string name="question2">How were you travelling</string>
+    <string name="question3">Who were you with at</string>
+    <string name="question4">Where were you at</string>
+
+    <string name="appversion">Application Version</string>
+    <string name="updateNotificationTitle">i-Log is updating</string>
+
+    <string name="startLogging">Start Logging</string>
+    <string name="stopLogging">Stop Logging</string>
+
+    <string name="userLoggedIn">User logged in</string>
+    <string name="userNotLoggedIn">User not logged in</string>
+
+    <string name="trackingActivated">Tracking is activated</string>
+
+    <string name="shortcut_settings_short">Settings</string>
+    <string name="shortcut_settings_long">Settings</string>
+    <string name="shortcut_settings_disabled">Settings</string>
+    <string name="shortcut_questions_short">Time Diary</string>
+    <string name="shortcut_questions_long">Time Diary</string>
+    <string name="shortcut_questions_disabled">Time Diary</string>
+
+    <string name="battery_permission_title">Battery Optimization</string>
+    <string name="location_permission_title">Access Location</string>
+    <string name="audio_permission_title">Detect Audio</string>
+    <string name="contacts_permission_title">Access Contacts</string>
+    <string name="sms_permission_title">Detect Phone Sms</string>
+    <string name="phone_permission_title">Detect Phone Calls</string>
+    <string name="notifications_permission_title">Detect Notifications</string>
+    <string name="applications_permission_title">Detect Running Application</string>
+    <string name="touch_permission_title">Detect Touch Events</string>
+    <string name="camera_permission_title">Take Pictures</string>
+    <string name="wifi_permission_title">Automatic synchronization over Wi-Fi</string>
+    <string name="disable_permission_message">To disable this permission, please go to System Settings</string>
+
+    <string name="welcome_message">Welcome to i-Log</string>
+    <string name="description_message">i-Log is a application developed by the University of Trento and its main purpose is to collect personal big data and produce research outcomes with them. \n\n In the box below insert the code you were provided to select the experiment.</string>
+    <string name="configuration_message">First of all, let\'s configure i-Log</string>
+    <string name="start_configuration_message">START</string>
+    <string name="resume_configuration_message">RESUME</string>
+    <string name="battery_message">To allow i-Log to run in the background, we ask the users to ignore the battery optimization option. This won\'t really affect the actual battery life.\nWithout this, i-Log cannot run at all :-(</string>
+    <string name="battery_confirmation">CONTINUE</string>
+    <string name="location_message">Allows to collect the Location of the device. This is useful to understand people mobility habits.\nWe don\'t care where people live.</string>
+    <string name="location_confirmation">CONTINUE</string>
+    <string name="notifications_message">Allows to detect incoming notifications. Their content can\'t be accessed, but it just detects that the user received one. This helps in understanding how people interact with technology.</string>
+    <string name="notifications_confirmation">CONTINUE</string>
+    <string name="audio_message">Allows to collect small pieces of sound from the surroundings. This helps in understanding where people go.\nWe are not Google, we are not that good in understanding what people say, so don\'t worry.</string>
+    <string name="audio_confirmation">CONTINUE</string>
+    <string name="applications_message">Allows to collect the name of the running application on the phone. This helps in understanding how users interact with their phones.</string>
+    <string name="applications_confirmation">CONTINUE</string>
+    <string name="touch_message">Allows to detect when the user touches the screen, but we don\'t know where the touch happens. This helps in understanding how users interact with their phones.</string>
+    <string name="touch_confirmation">CONTINUE</string>
+    <string name="phone_message">Allows to detect when a call is made or received. The content of the call is not accessible. This helps in understanding interactions among users.</string>
+    <string name="phone_confirmation">CONTINUE</string>
+    <string name="sms_message">Allows to detect when a sms is sent or received. The content of the sms is not accessible. This helps in understanding interactions among users.</string>
+    <string name="sms_confirmation">CONTINUE</string>
+    <string name="contacts_message">Even if the data is stored anonymously and we cannot know what you do, we need you to login to allow the synchronization with the server. \nWithout this, i-Log cannot run at all :-(</string>
+    <string name="contacts_confirmation">CONTINUE</string>
+    <string name="summary_message_low" formatted="false">The configuration procedure is over!\nNow, just keep i-Log running and reply to the questions whenever possible.\nYou have provided %d permissions out of %d, please remember that if you want to provide more, you can do so in the i-Log Settings.\nThank you very much!</string>
+    <string name="summary_message_high">The configuration procedure is over!\nYou don\'t need to do anything else, just keep i-Log running and reply to the questions whenever possible.\nThank you very much!</string>
+    <string name="summary_confirmation">FINISH</string>
+    <string name="summary_gotosettings">GO TO SETTINGS</string>
+    <string name="login_message">Please select your main Google account, the one you use on the Google Play Store :-(</string>
+    <string name="login_confirmation">CONTINUE</string>
+    <string name="login_title">Login</string>
+    <string name="skip">SKIP</string>
+
+    <string name="project_retrieval_not_found">Project not found</string>
+    <string name="project_retrieval_error">Error in retrieving the project information, retry</string>
+    <string name="project_retrieval_done">Project found</string>
+
+    <string name="consent_message">Informed consent</string>
+    <string name="profile_message">Profile</string>
+    <string name="permissions_message">Permissions</string>
+
+    <string name="confirm_message">Confirm</string>
+
+    <string name="scroll_down_consent">Scroll down the text above</string>
+    <string name="give_consent">Authorize before proceeding</string>
+
+    <string name="resetapp">Reset application</string>
+    <string name="resetappsummary">Reset all settings and experiments</string>
+
+    <string name="app_resetted_message">Restarting, app resetted</string>
+
+    <string name="app_deletion_title">Application reset confirmation</string>
+    <string name="app_deletion_message">This process is irreversable, if you confirm all the settings will be deleted</string>
+
+    <string name="reset">Reset</string>
+    <string name="errorAlreadySynchronizing">Already uploading files</string>
+
+    <string name="authorize">Authorize</string>
+    <string name="profile_upload_error">Error in uploading the profile information, please retry</string>
+    <string name="profile_upload_error_retry">Retry</string>
+
+    <string name="challenges_ongoing_settings_title">Ongoing</string>
+    <string name="challenges_available_settings_title">Available</string>
+    <string name="challenges_completed_settings_title">Completed</string>
+    <string name="challenges_expired_settings_title">Expired</string>
+
+    <string name="challenges_ongoing_settings_summary" formatted="false">You have %s challenges to contribute to</string>
+    <string name="challenges_no_ongoing_settings_summary">No challenges to participate to at the moment</string>
+    <string name="challenges_available_settings_summary" formatted="false">There are %s challenges available</string>
+    <string name="challenges_completed_settings_summary" formatted="false">You have %s completed challenges</string>
+    <string name="challenges_expired_settings_summary" formatted="false">You have %s expired challenges</string>
+
+    <string name="challenges_completed" formatted="true">Challenge completed on %s, result %s</string>
+    <string name="challenges_completed_on" formatted="true">Challenge completed on %s, result %s</string>
+    <string name="challenges_expired_on" formatted="true">Challenge expired on %s</string>
+    <string name="challenges_started_on" formatted="true">Challenge started on %s</string>
+    <string name="challenges_ongoing_status" formatted="true">This challenge has %s contributions out of %s</string>
+    <string name="challenges_ongoing_freeroam_status" formatted="true">You provided %s contributions for this challenge</string>
+
+    <string name="errorDownloadingAvailableChallenges" formatted="false">Error downloading available challenges, retry later.</string>
+    <string name="no_challenges_available" formatted="false">No new challenges available at the moment</string>
+
+    <string name="message_unread_settings_summary" formatted="false">You have %s unread messages</string>
+    <string name="message_unread_settings_title">Unread</string>
+    <string name="message_read_settings_summary" formatted="false">You have %s read messages</string>
+    <string name="message_read_settings_title">Read</string>
+
+    <string name="tasks_unsolved_settings_summary" formatted="false">You have %s unsolved tasks</string>
+    <string name="tasks_unsolved_settings_title">Unsolved</string>
+    <string name="tasks_solved_settings_summary" formatted="false">You have %s solved tasks</string>
+    <string name="tasks_solved_settings_title">Solved</string>
+
+    <string name="tasks_no_unsolved_settings_summary" formatted="false">You have no unsolved tasks</string>
+    <string name="tasks_no_solved_settings_summary" formatted="false">You have no solved tasks</string>
+    <string name="message_no_read_settings_summary" formatted="false">You have no read messages</string>
+    <string name="message_no_unread_settings_summary" formatted="false">You have no unread messages</string>
+    <string name="challenges_no_available_settings_summary" formatted="false">You have no active challenges</string>
+    <string name="challenges_no_completed_settings_summary" formatted="false">You have no completed challenges</string>
+    <string name="challenges_no_expired_settings_summary" formatted="false">You have no expired challenges</string>
+
+    <string name="relogin_message">Please Login again with your Google account</string>
+    <string name="available_challenges_loading">Loading challenges...</string>
+    <string name="participateChallenge" formatted="false">Participate</string>
+    <string name="add_contribution">Add contribution</string>
+
+    <string name="already_constraints" formatted="false">You have already provided %s answers in the last %s %s, retry in %s</string>
+    <string name="already_constraints_no_variables">You have already provided enough answers for this challenge, retry later</string>
+
+    <string name="timediaries_settings_title">Time Diaries</string>
+    <string name="timediaries_unsolved_settings_summary" formatted="false">You have %s unsolved time diaries</string>
+    <string name="timediaries_unsolved_settings_title" formatted="false">Unsolved</string>
+    <string name="timediaries_solved_settings_summary" formatted="false">You have %s solved time diaries</string>
+    <string name="timediaries_solved_settings_title" formatted="false">Solved</string>
+    <string name="timediaries_expired_settings_summary" formatted="false">You have %s expired time diaries</string>
+    <string name="timediaries_expired_settings_title" formatted="false">Expired</string>
+
+    <string name="timediaries_no_unsolved_settings_summary" formatted="false">You have no unsolved time diaries</string>
+    <string name="timediaries_no_solved_settings_summary" formatted="false">You have no solved time diaries</string>
+    <string name="timediaries_no_expired_settings_summary" formatted="false">You have no expired time diaries</string>
+
+    <string name="tasks_expired_settings_summary" formatted="false">You have %s expired tasks</string>
+    <string name="tasks_expired_settings_title" formatted="false">Expired</string>
+    <string name="tasks_no_expired_settings_summary" formatted="false">You have no expired tasks</string>
+
+    <string name="messages_expired_settings_summary" formatted="false">You have %s expired messages</string>
+    <string name="messages_expired_settings_title" formatted="false">Expired</string>
+    <string name="messages_no_expired_settings_summary" formatted="false">You have no expired messages</string>
+
+    <string name="enable_dump" formatted="false">Click %s times more to enable dump</string>
+    <string name="challenges_check" formatted="false">Click to check for available challenges</string>
+    <string name="challenges_checking" formatted="false">Checking for new challenges</string>
+
+    <string name="loading_map_challenge">Looking for a more accurate position...</string>
+    <string name="loaded_map_challenge">Accurate position found</string>
+    <string name="reload_message">Reload position</string>
+
+    <string name="minutes"> minute(s)</string>
+    <string name="seconds"> second(s)</string>
+    <string name="hours"> hour(s)</string>
+    <string name="days"> day(s)</string>
+
+    <string name="drawer_open">Open navigation drawer</string>
+    <string name="drawer_close">Close navigation drawer</string>
+</resources>
+
