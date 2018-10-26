@@ -10,6 +10,8 @@ import android.widget.ArrayAdapter;
 import android.widget.ImageView;
 import android.widget.TextView;
 
+import java.util.List;
+
 import it.unitn.disi.witmee.sensorlog.R;
 import it.unitn.disi.witmee.sensorlog.utils.MenuElement;
 
@@ -17,11 +19,11 @@ public class MenuAdapter extends ArrayAdapter<MenuElement> {
 
     private final Context context;
     private final int layoutResourceId;
-    private MenuElement data[] = null;
+    private List<MenuElement> data = null;
     private ImageView images; //////////////// var per la posizione delle immagini.
 
 
-    public MenuAdapter(Context context, int layoutResourceId, MenuElement [] data)
+    public MenuAdapter(Context context, int layoutResourceId, List<MenuElement> data)
     {
         super(context, layoutResourceId, data);
         this.context = context;
@@ -37,46 +39,19 @@ public class MenuAdapter extends ArrayAdapter<MenuElement> {
         View v = inflater.inflate(layoutResourceId, parent, false);
 
         TextView textView = (TextView) v.findViewById(R.id.text);
-
-        //var in cui salvo l'id dell layout dell'immagine.
         images = (ImageView) v.findViewById(R.id.Icon);
         Drawable imageDrawable = null; //variabile in cui ci vado a disegnare la icona.
 
-        MenuElement choice = data[position];
-
+        MenuElement choice = data.get(position);
+        imageDrawable = choice.getIcon();
 
         textView.setText(choice.getDescription());
-        switch (choice.getCode()) {
-            case("Profile"): {
-                imageDrawable = context.getResources().getDrawable(R.drawable.image_menu_profile);
-                break;
-            }
-            case ("Survey"): {
-                imageDrawable = context.getResources().getDrawable(R.drawable.image_menu_survey);
-                break;
-            }
-            case ("Graph"): {
-                imageDrawable = context.getResources().getDrawable(R.drawable.image_menu_graph);
-                break;
-            }
-            case ("Information"):{
-                imageDrawable = context.getResources().getDrawable(R.drawable.image_menu_information);
-                break;
-            }
-            case ("Quit"): {
-                imageDrawable = context.getResources().getDrawable(R.drawable.image_menu_quit);
-                break;
-            }
 
-            default:{
-
-                break;
-            }
-        }
 
         if(imageDrawable!=null) {
             // collego la variabile che è stata disegnata al layout dell'immagine.
             images.setImageDrawable(imageDrawable);
+            textView.setText(choice.getDescription());
         }
         return v;
     }

@@ -1,5 +1,6 @@
 package it.unitn.disi.witmee.sensorlog.activities;
 
+import android.app.Activity;
 import android.content.Intent;
 import android.graphics.drawable.Drawable;
 import android.os.Bundle;
@@ -11,13 +12,15 @@ import android.support.v7.app.AppCompatActivity;
 import android.util.Log;
 import android.view.View;
 import android.widget.AdapterView;
-import android.widget.ArrayAdapter;
 import android.widget.ListView;
 import android.widget.Toast;
-
+import java.util.ArrayList;
+import java.util.List;
+import it.unitn.disi.witmee.sensorlog.adapters.MenuAdapter;
 import it.unitn.disi.witmee.sensorlog.application.iLogApplication;
 import it.unitn.disi.witmee.sensorlog.broadcastreceivers.ExecuteOnPhoneStartup;
 import it.unitn.disi.witmee.sensorlog.R;
+import it.unitn.disi.witmee.sensorlog.utils.MenuElement;
 import it.unitn.disi.witmee.sensorlog.utils.Utils;
 
 /**
@@ -27,9 +30,10 @@ import it.unitn.disi.witmee.sensorlog.utils.Utils;
 public class MainActivity extends AppCompatActivity {
     private ListView mDrawerList;
     private DrawerLayout mDrawerLayout;
-    private ArrayAdapter<String> mAdapter;
+    private MenuAdapter mAdapter;
     private ActionBarDrawerToggle mDrawerToggle;
     private String mActivityTitle;
+
     @Override
     public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -37,8 +41,8 @@ public class MainActivity extends AppCompatActivity {
         setContentView(R.layout.main_activity);
         Log.d(this.toString(), "MainActivity created.");
 
-        mDrawerList = (ListView)findViewById(R.id.navList);
-        mDrawerLayout = (DrawerLayout)findViewById(R.id.drawer_layout);
+        mDrawerList = (ListView) findViewById(R.id.navList);
+        mDrawerLayout = (DrawerLayout) findViewById(R.id.drawer_layout);
         mActivityTitle = "I_Log";
 
         addDrawerItems();
@@ -49,16 +53,18 @@ public class MainActivity extends AppCompatActivity {
 
         Drawable d = getDrawable(R.color.primary);
         ActionBar actionBar = getSupportActionBar();
-        if(getSupportActionBar() != null){
+        if (getSupportActionBar() != null) {
             actionBar.setBackgroundDrawable(d);
-            actionBar.setDisplayHomeAsUpEnabled(true);
+            actionBar.setHomeAsUpIndicator(R.drawable.ic_menu_notification_bar);
+            actionBar.setTitle("I_LOG");
+            //actionBar.setDisplayHomeAsUpEnabled(true);
         }
 
         //Handle autorun on smartphone startup
         Intent intent = getIntent();
         if (intent != null) {
             try {
-                if (intent.getBooleanExtra(ExecuteOnPhoneStartup.AUTO_RUN, false)){
+                if (intent.getBooleanExtra(ExecuteOnPhoneStartup.AUTO_RUN, false)) {
                     moveTaskToBack(true);
                 }
             } catch (Exception e) {
@@ -69,19 +75,17 @@ public class MainActivity extends AppCompatActivity {
         /**
          * If no data about any project is available it means we need to run the {@link ProjectSelectionActivity}
          */
-        if(!iLogApplication.sharedPreferences.getBoolean(Utils.CONFIG_PROJECTSELECTIONDONE, false)) {
+        if (!iLogApplication.sharedPreferences.getBoolean(Utils.CONFIG_PROJECTSELECTIONDONE, false)) {
             Log.d(this.toString(), "FirstExecutionActivity");
             iLogApplication.launchProjectSelectionActivity(MainActivity.this);
-        }
-        else {
+        } else {
             /**
              * If there is data about a project, but the user did not perform the login, did not provide the consensus, did not provide permissions and did not fill the profile,
              * means that the procedure is not complete yet and then we need to show again the {@link ProjectActivity}.
              */
-            if(!iLogApplication.sharedPreferences.getBoolean(Utils.CONFIG_LOGINDONE, false) ||!iLogApplication.sharedPreferences.getBoolean(Utils.CONFIG_CONSENTDONE, false) || !iLogApplication.sharedPreferences.getBoolean(Utils.CONFIG_PERMISSIONSDONE, false) || !iLogApplication.sharedPreferences.getBoolean(Utils.CONFIG_PROFILEDONE, false)) {
+            if (!iLogApplication.sharedPreferences.getBoolean(Utils.CONFIG_LOGINDONE, false) || !iLogApplication.sharedPreferences.getBoolean(Utils.CONFIG_CONSENTDONE, false) || !iLogApplication.sharedPreferences.getBoolean(Utils.CONFIG_PERMISSIONSDONE, false) || !iLogApplication.sharedPreferences.getBoolean(Utils.CONFIG_PROFILEDONE, false)) {
                 iLogApplication.launchProjectActivity(MainActivity.this);
-            }
-            else {
+            } else {
                 iLogApplication.startLogging();
             }
         }
@@ -90,9 +94,34 @@ public class MainActivity extends AppCompatActivity {
 
         //finish();
     }
-    
+
+    private void setupDrawer() {
+        mDrawerToggle = new ActionBarDrawerToggle(this, mDrawerLayout, R.string.drawer_open, R.string.drawer_close) {
+
+            /** Called when a drawer has settled in a completely open state. */
+            public void onDrawerOpened(View drawerView) {
+                super.onDrawerOpened(drawerView);
+                getSupportActionBar().setTitle("Menu");
+                getSupportActionBar().setHomeAsUpIndicator(R.drawable.ic_arrow_back);
+                invalidateOptionsMenu(); // creates call to onPrepareOptionsMenu()
+            }
+
+            /** Called when a drawer has settled in a completely closed state. */
+            public void onDrawerClosed(View view) {
+                super.onDrawerClosed(view);
+                getSupportActionBar().setTitle("I_LOG");
+                getSupportActionBar().setHomeAsUpIndicator(R.drawable.ic_menu_notification_bar);
+                invalidateOptionsMenu(); // creates call to onPrepareOptionsMenu()
+            }
+        };
+
+        mDrawerToggle.setDrawerIndicatorEnabled(true);
+        mDrawerLayout.setDrawerListener(mDrawerToggle);
+    }
+
     /**
      * Debug method used to make the application crash voluntarily
+     *
      * @param interval Time interval in seconds after which the application crashes
      */
     private void forceCrash(int interval) {
@@ -104,39 +133,67 @@ public class MainActivity extends AppCompatActivity {
             }
         }, interval * 1000);
     }
+
     private void addDrawerItems() {
-        String[] osArray = { "Profilo", "Questionari", "Grafici", "Informazioni", "Chiudi" };
-        mAdapter = new ArrayAdapter<String>(this, android.R.layout.simple_list_item_1, osArray);
-        mDrawerList.setAdapter(mAdapter);
+        String[] osArray = {"Profilo", "Questionari", "Grafici", "Informazioni", "Chiudi"};
+        List menuElements = new ArrayList<MenuElement>();
+        MenuElement m;
+        String code;
+            for (String menuElement : osArray) {
 
-        mDrawerList.setOnItemClickListener(new AdapterView.OnItemClickListener() {
-            @Override
-            public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
-                //switch con i vari casi
-                Toast.makeText(MainActivity.this, "Time for an upgrade!", Toast.LENGTH_SHORT).show();
+                Drawable imageDrawable;
+                Activity ownActivity = null;
+                switch (menuElement) {
+                    case ("Profilo"): {
+                        code = "Profile";
+                        //ownActivity = null;
+                        imageDrawable = getResources().getDrawable(R.drawable.image_menu_profile);
+                        break;
+                    }
+                    case ("Questionari"): {
+                        code = "Survey";
+                        //ownActivity = null;
+                        imageDrawable = getResources().getDrawable(R.drawable.image_menu_survey);
+                        break;
+                    }
+                    case ("Grafici"): {
+                        code = "Graph";
+                        //ownActivity = null;
+                        imageDrawable = getResources().getDrawable(R.drawable.image_menu_graph);
+                        break;
+                    }
+                    case ("Informazioni"): {
+                        code = "Information";
+                        //ownActivity = null;
+                        imageDrawable = getResources().getDrawable(R.drawable.image_menu_information);
+                        break;
+                    }
+                    case ("Chiudi"): {
+                        code = "Quit";
+                        //ownActivity = null;
+                        imageDrawable = getResources().getDrawable(R.drawable.image_menu_quit);
+                        break;
+                    }
+                    default: {
+                        code = "";
+                        //ownActivity = null;
+                        imageDrawable = getResources().getDrawable(R.drawable.ic_missing_icon);
+                        break;
+                    }
+                }
+                m = new MenuElement(code, menuElement, imageDrawable,ownActivity, true);
+                menuElements.add(m);
             }
-        });
+
+            mAdapter = new MenuAdapter(this, R.layout.menu_layout, menuElements);
+            //ArrayAdapter<String>(this, android.R.layout.simple_list_item_1, osArray);
+            mDrawerList.setAdapter(mAdapter);
+            mDrawerList.setOnItemClickListener(new ListView.OnItemClickListener() {
+                @Override
+                public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
+                    //switch con i vari casi
+                    Toast.makeText(MainActivity.this, "Time for an upgrade!", Toast.LENGTH_SHORT).show();
+                }
+            });
+        }
     }
-
-    private void setupDrawer() {
-        mDrawerToggle = new ActionBarDrawerToggle(this, mDrawerLayout, R.string.drawer_open, R.string.drawer_close) {
-
-            /** Called when a drawer has settled in a completely open state. */
-            public void onDrawerOpened(View drawerView) {
-                super.onDrawerOpened(drawerView);
-                getSupportActionBar().setTitle("Menu");
-                invalidateOptionsMenu(); // creates call to onPrepareOptionsMenu()
-            }
-
-            /** Called when a drawer has settled in a completely closed state. */
-            public void onDrawerClosed(View view) {
-                super.onDrawerClosed(view);
-                getSupportActionBar().setTitle("I_Log");
-                invalidateOptionsMenu(); // creates call to onPrepareOptionsMenu()
-            }
-        };
-
-        mDrawerToggle.setDrawerIndicatorEnabled(true);
-        mDrawerLayout.setDrawerListener(mDrawerToggle);
-    }
-}

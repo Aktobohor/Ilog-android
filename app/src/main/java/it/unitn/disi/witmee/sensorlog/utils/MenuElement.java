@@ -1,23 +1,28 @@
 package it.unitn.disi.witmee.sensorlog.utils;
 
-public class MenuElement {
-    public MenuElement (String code, String description, int icon, boolean isToShow) {
+import android.app.Activity;
+import android.graphics.drawable.Drawable;
+
+public class    MenuElement {
+    public MenuElement (String code, String description, Drawable icon,Activity activity, boolean isToShow) {
         this.code = code;
         this.description = description;
         this.icon = icon;
         this.isToShow = isToShow;
+        this.activity = activity;
     }
 
     //#region getters/setters
     private String code,
             description;
-    private int icon;
+    private Drawable icon;
     private boolean isToShow;
+    private Activity activity;
 
-    public int getIcon() {
+    public Drawable getIcon() {
         return icon;
     }
-    public void setIcon(int icon) {
+    public void setIcon(Drawable icon) {
         this.icon = icon;
     }
 
@@ -45,5 +50,13 @@ public class MenuElement {
 
     public String toString() {
         return "[" + this.code + "," + this.description + "," + this.icon + "," + this.isToShow + "]";
+    }
+
+    public Activity getActivity() {
+        return activity;
+    }
+
+    public void setActivity(Activity activity) {
+        this.activity = activity;
     }
 }
