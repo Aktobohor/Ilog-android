@@ -1,20 +1,17 @@
 package it.unitn.disi.witmee.sensorlog.activities;
 
-import android.app.Activity;
 import android.content.Intent;
-import android.graphics.drawable.Drawable;
 import android.os.Bundle;
 import android.os.Handler;
 import android.support.v4.widget.DrawerLayout;
-import android.support.v7.app.ActionBar;
-import android.support.v7.app.ActionBarDrawerToggle;
 import android.support.v7.app.AppCompatActivity;
 import android.util.Log;
+import android.view.Gravity;
 import android.view.View;
 import android.widget.AdapterView;
+import android.widget.ImageButton;
 import android.widget.ListView;
 import android.widget.Toast;
-import java.util.ArrayList;
 import java.util.List;
 import it.unitn.disi.witmee.sensorlog.adapters.MenuAdapter;
 import it.unitn.disi.witmee.sensorlog.application.iLogApplication;
@@ -28,11 +25,11 @@ import it.unitn.disi.witmee.sensorlog.utils.Utils;
  * {@link ProjectSelectionActivity} or {@link ProjectActivity} and to start the logging process.
  */
 public class MainActivity extends AppCompatActivity {
+    List<MenuElement> menuElements;
     private ListView mDrawerList;
     private DrawerLayout mDrawerLayout;
     private MenuAdapter mAdapter;
-    private ActionBarDrawerToggle mDrawerToggle;
-    private String mActivityTitle;
+    private ImageButton btnOpenMenu , btnProfile, btnSettings, btnGraph, btnSurvey;
 
     @Override
     public void onCreate(Bundle savedInstanceState) {
@@ -41,14 +38,20 @@ public class MainActivity extends AppCompatActivity {
         setContentView(R.layout.main_activity);
         Log.d(this.toString(), "MainActivity created.");
 
+        //comando universale per settare il contesto della pagina su cui la singleton instanzia le componenti come il menu.
+        ILog_CommonMethod.getInstance().setCurrentContext(getBaseContext());
+        //comando per la generazione del menu
+        ILog_CommonMethod.getInstance().CreateMenu();
         mDrawerList = (ListView) findViewById(R.id.navList);
         mDrawerLayout = (DrawerLayout) findViewById(R.id.drawer_layout);
-        mActivityTitle = "I_Log";
 
-        addDrawerItems();
-        setupDrawer();
+        AttachMenu();
+        InitializeHomeButtons();
 
-        getSupportActionBar().setDisplayHomeAsUpEnabled(true);
+
+        //setupDrawer();
+
+        /*getSupportActionBar().setDisplayHomeAsUpEnabled(true);
         getSupportActionBar().setHomeButtonEnabled(true);
 
         Drawable d = getDrawable(R.color.primary);
@@ -58,7 +61,7 @@ public class MainActivity extends AppCompatActivity {
             actionBar.setHomeAsUpIndicator(R.drawable.ic_menu_notification_bar);
             actionBar.setTitle("I_LOG");
             //actionBar.setDisplayHomeAsUpEnabled(true);
-        }
+        }*/
 
         //Handle autorun on smartphone startup
         Intent intent = getIntent();
@@ -95,29 +98,91 @@ public class MainActivity extends AppCompatActivity {
         //finish();
     }
 
-    private void setupDrawer() {
+    private void InitializeHomeButtons() {
+        btnOpenMenu = (ImageButton) findViewById(R.id.btn_open_menu);
+        btnOpenMenu.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                mDrawerLayout.openDrawer(Gravity.START);
+                Toast.makeText(getBaseContext(),"Apri menu",Toast.LENGTH_LONG).show();
+            }
+        });
+
+        btnProfile = (ImageButton) findViewById(R.id.imagebutton_profile);
+        btnProfile.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Toast.makeText(getBaseContext(),"Cliccato",Toast.LENGTH_LONG).show();
+                //Intent newIntent = new Intent(MainActivity.class, ProfileActivity.class);
+                //startActivity(newIntent);
+            }
+        });
+        btnSettings = (ImageButton) findViewById(R.id.imagebutton_settings);
+        btnSettings.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Toast.makeText(getBaseContext(),"Settaggi",Toast.LENGTH_LONG).show();
+            }
+        });
+        btnGraph = (ImageButton) findViewById(R.id.imagebutton_graph);
+        btnGraph.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Toast.makeText(getBaseContext(),"Grafici",Toast.LENGTH_LONG).show();
+            }
+        });
+        btnSurvey = (ImageButton) findViewById(R.id.imagebutton_survey);
+        btnSurvey.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Toast.makeText(getBaseContext(),"Grafici",Toast.LENGTH_LONG).show();
+            }
+        });
+    }
+
+    private void AttachMenu() {
+        menuElements = ILog_CommonMethod.getInstance().getMenuElement();
+        mAdapter = new MenuAdapter(getBaseContext(), R.layout.menu_layout, menuElements);
+        mDrawerList.setAdapter(mAdapter);
+        mDrawerList.setOnItemClickListener(new ListView.OnItemClickListener() {
+            @Override
+            public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
+                //switch con i vari casi
+                MenuElement selected = (MenuElement) menuElements.get(position);
+                Intent intetnmaster = selected.getIntent();
+                startActivity(intetnmaster);
+            }
+        });
+    }
+
+
+    /*private void setupDrawer() {
         mDrawerToggle = new ActionBarDrawerToggle(this, mDrawerLayout, R.string.drawer_open, R.string.drawer_close) {
 
-            /** Called when a drawer has settled in a completely open state. */
+            // Called when a drawer has settled in a completely open state.
             public void onDrawerOpened(View drawerView) {
                 super.onDrawerOpened(drawerView);
                 getSupportActionBar().setTitle("Menu");
                 getSupportActionBar().setHomeAsUpIndicator(R.drawable.ic_arrow_back);
+                getSupportActionBar().setDisplayShowHomeEnabled(true);
+
                 invalidateOptionsMenu(); // creates call to onPrepareOptionsMenu()
             }
 
-            /** Called when a drawer has settled in a completely closed state. */
+            // Called when a drawer has settled in a completely closed state.
             public void onDrawerClosed(View view) {
                 super.onDrawerClosed(view);
                 getSupportActionBar().setTitle("I_LOG");
                 getSupportActionBar().setHomeAsUpIndicator(R.drawable.ic_menu_notification_bar);
-                invalidateOptionsMenu(); // creates call to onPrepareOptionsMenu()
+                getSupportActionBar().setDisplayShowHomeEnabled(true);
+                //invalidateOptionsMenu(); // creates call to onPrepareOptionsMenu()
             }
         };
 
         mDrawerToggle.setDrawerIndicatorEnabled(true);
         mDrawerLayout.setDrawerListener(mDrawerToggle);
-    }
+    }*/
+
 
     /**
      * Debug method used to make the application crash voluntarily
@@ -133,67 +198,4 @@ public class MainActivity extends AppCompatActivity {
             }
         }, interval * 1000);
     }
-
-    private void addDrawerItems() {
-        String[] osArray = {"Profilo", "Questionari", "Grafici", "Informazioni", "Chiudi"};
-        List menuElements = new ArrayList<MenuElement>();
-        MenuElement m;
-        String code;
-            for (String menuElement : osArray) {
-
-                Drawable imageDrawable;
-                Activity ownActivity = null;
-                switch (menuElement) {
-                    case ("Profilo"): {
-                        code = "Profile";
-                        //ownActivity = null;
-                        imageDrawable = getResources().getDrawable(R.drawable.image_menu_profile);
-                        break;
-                    }
-                    case ("Questionari"): {
-                        code = "Survey";
-                        //ownActivity = null;
-                        imageDrawable = getResources().getDrawable(R.drawable.image_menu_survey);
-                        break;
-                    }
-                    case ("Grafici"): {
-                        code = "Graph";
-                        //ownActivity = null;
-                        imageDrawable = getResources().getDrawable(R.drawable.image_menu_graph);
-                        break;
-                    }
-                    case ("Informazioni"): {
-                        code = "Information";
-                        //ownActivity = null;
-                        imageDrawable = getResources().getDrawable(R.drawable.image_menu_information);
-                        break;
-                    }
-                    case ("Chiudi"): {
-                        code = "Quit";
-                        //ownActivity = null;
-                        imageDrawable = getResources().getDrawable(R.drawable.image_menu_quit);
-                        break;
-                    }
-                    default: {
-                        code = "";
-                        //ownActivity = null;
-                        imageDrawable = getResources().getDrawable(R.drawable.ic_missing_icon);
-                        break;
-                    }
-                }
-                m = new MenuElement(code, menuElement, imageDrawable,ownActivity, true);
-                menuElements.add(m);
-            }
-
-            mAdapter = new MenuAdapter(this, R.layout.menu_layout, menuElements);
-            //ArrayAdapter<String>(this, android.R.layout.simple_list_item_1, osArray);
-            mDrawerList.setAdapter(mAdapter);
-            mDrawerList.setOnItemClickListener(new ListView.OnItemClickListener() {
-                @Override
-                public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
-                    //switch con i vari casi
-                    Toast.makeText(MainActivity.this, "Time for an upgrade!", Toast.LENGTH_SHORT).show();
-                }
-            });
-        }
-    }
+}

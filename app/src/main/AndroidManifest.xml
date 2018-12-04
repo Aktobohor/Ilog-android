@@ -51,7 +51,7 @@
                  android:largeHeap="true">
 
         <activity android:name="it.unitn.disi.witmee.sensorlog.activities.MainActivity"
-                  android:theme="@style/Theme.AppCompat.Light"
+                  android:theme="@style/Theme.AppCompat.Light.NoActionBar"
                   android:excludeFromRecents="true"
                   android:configChanges="keyboard|keyboardHidden|orientation|screenSize">
             <intent-filter>

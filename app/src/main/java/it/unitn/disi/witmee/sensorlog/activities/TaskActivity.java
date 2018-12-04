@@ -4,12 +4,17 @@ package it.unitn.disi.witmee.sensorlog.activities;
  * Created by mattiazeni on 5/23/17.
  */
 
+import android.app.Activity;
 import android.content.Intent;
+import android.graphics.drawable.Drawable;
 import android.os.Bundle;
 import android.view.MenuItem;
 
 import org.json.JSONArray;
 import org.json.JSONException;
+
+import java.util.ArrayList;
+import java.util.List;
 
 import it.unitn.disi.witmee.sensorlog.R;
 import it.unitn.disi.witmee.sensorlog.application.iLogApplication;
@@ -17,6 +22,7 @@ import it.unitn.disi.witmee.sensorlog.fragments.ContributionFragment;
 import it.unitn.disi.witmee.sensorlog.model.Answer;
 import it.unitn.disi.witmee.sensorlog.model.Task;
 import it.unitn.disi.witmee.sensorlog.model.system.ST;
+import it.unitn.disi.witmee.sensorlog.utils.MenuElement;
 
 /**
  * Activity that extends {@link ContributionActivity} and is intended to display the content of a {@link Task}.

@@ -1,18 +1,24 @@
 package it.unitn.disi.witmee.sensorlog.activities;
 
 import android.app.Activity;
+import android.app.DatePickerDialog;
 import android.content.Intent;
 import android.os.Bundle;
 import android.view.MenuItem;
-
+import android.view.View;
+import android.widget.Button;
+import android.widget.DatePicker;
+import android.widget.EditText;
+import android.widget.ImageButton;
+import android.widget.TextView;
+import com.ybs.countrypicker.CountryPicker;
+import com.ybs.countrypicker.CountryPickerListener;
 import org.json.JSONArray;
 import org.json.JSONException;
-
 import it.unitn.disi.witmee.sensorlog.R;
 import it.unitn.disi.witmee.sensorlog.application.iLogApplication;
 import it.unitn.disi.witmee.sensorlog.fragments.ContributionFragment;
 import it.unitn.disi.witmee.sensorlog.model.Question;
-import it.unitn.disi.witmee.sensorlog.model.Task;
 import it.unitn.disi.witmee.sensorlog.utils.Utils;
 
 /**
@@ -20,6 +26,13 @@ import it.unitn.disi.witmee.sensorlog.utils.Utils;
  */
 public class ProfileActivity extends ContributionActivity {
 
+    private Button btnSavechanges,btnDeleteChanges;
+    private EditText editTextUseranme,editTextName, editTextSurname;
+    private ImageButton btnDatePiker,flagCountryPiker;
+    private TextView textBornDate,textCountry;
+    private int mYear, mMonth, mDay;
+    private DatePickerDialog datePickerDialog;
+    private CountryPicker picker;
     /**
      * Default method called when the Activity is created. It is mainly used to initialize the variables. Since it is a FragmentActivity it uses Fragments
      * to display content to the users and specifically to {@link ContributionFragment}
@@ -28,7 +41,67 @@ public class ProfileActivity extends ContributionActivity {
     @Override
     public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_fragment);
+        setContentView(R.layout.profile_activity);
+
+        //comando universale per settare il contesto della pagina su cui la singleton instanzia le componenti come il menu.
+        ILog_CommonMethod.getInstance().setCurrentContext(getBaseContext());
+
+        //inizializzo tutte le componenti del layout in xml
+        btnSavechanges = findViewById(R.id.btn_conferma);
+        btnDeleteChanges = findViewById(R.id.btn_annulla);
+        editTextUseranme = findViewById(R.id.profile_username);
+        editTextName = findViewById(R.id.profile_name);
+        editTextSurname = findViewById(R.id.profile_surname);
+        flagCountryPiker = findViewById(R.id.flag_country_piker);
+        textCountry = findViewById(R.id.text_country);
+        btnDatePiker = findViewById(R.id.btn_date_piker);
+        textBornDate = findViewById(R.id.text_born_date);
+
+        //creo il datePiker per acquisire la data.
+        datePickerDialog = new DatePickerDialog(this,
+                new DatePickerDialog.OnDateSetListener() {
+
+                    @Override
+                    public void onDateSet(DatePicker view, int year,
+                                          int monthOfYear, int dayOfMonth) {
+
+                        textBornDate.setText(dayOfMonth + "/" + (monthOfYear + 1) + "/" + year);
+
+                    }
+                    //acquisisco anche le variabile per andare a settare se ci sarà una
+                    // variabile della data di nascita oltre che settare il campo della data
+                }, mYear, mMonth, mDay);
+
+
+        //istanzio il listener sul click del bottone con il calendario per
+        // mostrare il datePiker per selezionare la data.
+
+        btnDatePiker.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                datePickerDialog.updateDate(2000, 0, 1);
+                datePickerDialog.show();
+            }
+        });
+
+
+        picker = CountryPicker.newInstance("Select Country");  // dialog title
+        picker.setListener(new CountryPickerListener() {
+            @Override
+            public void onSelectCountry(String name, String code, String dialCode, int flagDrawableResID) {
+                flagCountryPiker.setImageDrawable(getResources().getDrawable(flagDrawableResID));
+                textCountry.setText(name);
+                picker.dismiss();
+            }
+        });
+        flagCountryPiker.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                picker.show(getSupportFragmentManager(), "COUNTRY_PICKER");
+            }
+        });
+
+
 
         selectedFragment = 1;
 
@@ -40,11 +113,11 @@ public class ProfileActivity extends ContributionActivity {
         Intent intent = getIntent();
         contribution = (Question) intent.getSerializableExtra("question");
 
-        try {
+        /*try {
             numberOfSubQuestions = new JSONArray(contribution.getContent()).length();
         } catch (JSONException e) {
             e.printStackTrace();
-        }
+        }*/
 
         if (findViewById(R.id.fragment_container) != null) {
             if (savedInstanceState != null) {

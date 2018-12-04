@@ -1,23 +1,23 @@
 package it.unitn.disi.witmee.sensorlog.utils;
 
 import android.app.Activity;
+import android.content.Intent;
 import android.graphics.drawable.Drawable;
 
 public class    MenuElement {
-    public MenuElement (String code, String description, Drawable icon,Activity activity, boolean isToShow) {
+
+    private String code, description;
+    private Drawable icon;
+    private boolean isToShow;
+    private Intent activity;
+
+    public MenuElement (String code, String description, Drawable icon, Intent activity, boolean isToShow) {
         this.code = code;
         this.description = description;
         this.icon = icon;
         this.isToShow = isToShow;
         this.activity = activity;
     }
-
-    //#region getters/setters
-    private String code,
-            description;
-    private Drawable icon;
-    private boolean isToShow;
-    private Activity activity;
 
     public Drawable getIcon() {
         return icon;
@@ -52,11 +52,11 @@ public class    MenuElement {
         return "[" + this.code + "," + this.description + "," + this.icon + "," + this.isToShow + "]";
     }
 
-    public Activity getActivity() {
+    public Intent getIntent() {
         return activity;
     }
 
-    public void setActivity(Activity activity) {
+    public void setIntent(Intent activity) {
         this.activity = activity;
     }
 }

@@ -34,7 +34,7 @@ public class MenuAdapter extends ArrayAdapter<MenuElement> {
     @Override
     public View getView(int position, View convertView, ViewGroup parent)
     {
-        LayoutInflater inflater = ((Activity) context).getLayoutInflater();
+        LayoutInflater inflater = (LayoutInflater) context.getSystemService( Context.LAYOUT_INFLATER_SERVICE );
 
         View v = inflater.inflate(layoutResourceId, parent, false);
 
