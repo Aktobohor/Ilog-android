@@ -51,7 +51,7 @@ import it.unitn.disi.witmee.sensorlog.utils.Utils;
  * Activity that extends {@link PreferenceActivity} that displays the Home menu about the user contributions. In this menu, the user can visualize all the available contributions,
  * reply to them, visualize the already replied ones.
  */
-public class HomeActivity extends PreferenceActivity {
+public class HomeActivity extends PreferenceActivity{
 
     PreferenceScreen tasksScreenUnsolved, tasksScreenSolved, tasksScreenExpired, timediariesScreenUnsolved, timediariesScreenSolved, timediariesScreenExpired, messagesScreenUnread, messagesScreenRead, messagesScreenExpired, challengesAvailable, challengesOngoing, challengesCompleted, challengesExpired;
     FusedLocationProviderClient mFusedLocationClient;

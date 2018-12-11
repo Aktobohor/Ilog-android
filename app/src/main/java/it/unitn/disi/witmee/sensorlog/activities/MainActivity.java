@@ -48,21 +48,6 @@ public class MainActivity extends AppCompatActivity {
         AttachMenu();
         InitializeHomeButtons();
 
-
-        //setupDrawer();
-
-        /*getSupportActionBar().setDisplayHomeAsUpEnabled(true);
-        getSupportActionBar().setHomeButtonEnabled(true);
-
-        Drawable d = getDrawable(R.color.primary);
-        ActionBar actionBar = getSupportActionBar();
-        if (getSupportActionBar() != null) {
-            actionBar.setBackgroundDrawable(d);
-            actionBar.setHomeAsUpIndicator(R.drawable.ic_menu_notification_bar);
-            actionBar.setTitle("I_LOG");
-            //actionBar.setDisplayHomeAsUpEnabled(true);
-        }*/
-
         //Handle autorun on smartphone startup
         Intent intent = getIntent();
         if (intent != null) {
@@ -104,7 +89,6 @@ public class MainActivity extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                 mDrawerLayout.openDrawer(Gravity.START);
-                Toast.makeText(getBaseContext(),"Apri menu",Toast.LENGTH_LONG).show();
             }
         });
 
@@ -112,9 +96,8 @@ public class MainActivity extends AppCompatActivity {
         btnProfile.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Toast.makeText(getBaseContext(),"Cliccato",Toast.LENGTH_LONG).show();
-                //Intent newIntent = new Intent(MainActivity.class, ProfileActivity.class);
-                //startActivity(newIntent);
+                Intent newIntent = new Intent(getBaseContext(), ProfileActivity.class);
+                startActivity(newIntent);
             }
         });
         btnSettings = (ImageButton) findViewById(R.id.imagebutton_settings);
@@ -135,11 +118,15 @@ public class MainActivity extends AppCompatActivity {
         btnSurvey.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Toast.makeText(getBaseContext(),"Grafici",Toast.LENGTH_LONG).show();
+                Toast.makeText(getBaseContext(),"Sondaggio",Toast.LENGTH_LONG).show();
             }
         });
     }
 
+    /**
+     * it puts the all menu's elements in his listview throw the menuAdapter.
+     * it compose the left sliding menu.
+     */
     private void AttachMenu() {
         menuElements = ILog_CommonMethod.getInstance().getMenuElement();
         mAdapter = new MenuAdapter(getBaseContext(), R.layout.menu_layout, menuElements);
@@ -154,35 +141,6 @@ public class MainActivity extends AppCompatActivity {
             }
         });
     }
-
-
-    /*private void setupDrawer() {
-        mDrawerToggle = new ActionBarDrawerToggle(this, mDrawerLayout, R.string.drawer_open, R.string.drawer_close) {
-
-            // Called when a drawer has settled in a completely open state.
-            public void onDrawerOpened(View drawerView) {
-                super.onDrawerOpened(drawerView);
-                getSupportActionBar().setTitle("Menu");
-                getSupportActionBar().setHomeAsUpIndicator(R.drawable.ic_arrow_back);
-                getSupportActionBar().setDisplayShowHomeEnabled(true);
-
-                invalidateOptionsMenu(); // creates call to onPrepareOptionsMenu()
-            }
-
-            // Called when a drawer has settled in a completely closed state.
-            public void onDrawerClosed(View view) {
-                super.onDrawerClosed(view);
-                getSupportActionBar().setTitle("I_LOG");
-                getSupportActionBar().setHomeAsUpIndicator(R.drawable.ic_menu_notification_bar);
-                getSupportActionBar().setDisplayShowHomeEnabled(true);
-                //invalidateOptionsMenu(); // creates call to onPrepareOptionsMenu()
-            }
-        };
-
-        mDrawerToggle.setDrawerIndicatorEnabled(true);
-        mDrawerLayout.setDrawerListener(mDrawerToggle);
-    }*/
-
 
     /**
      * Debug method used to make the application crash voluntarily
